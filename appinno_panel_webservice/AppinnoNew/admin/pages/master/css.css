@@ -1,0 +1,269 @@
+﻿.content {
+    width: 1000px;
+    margin: 0px auto 0px auto;
+    position: relative;
+    padding: 0px 15px 0px 15px;
+}
+
+.header {
+    background-color: #047ea7;
+    height: 70px;
+    margin: 0px;
+    left: 0px;
+    right: 0px;
+    position: relative;
+}
+
+    .header .appinno-logo {
+        margin: 0px auto 0px auto;
+        width: 60px;
+        height: 60px;
+        display: block;
+        float: right;
+    }
+
+    .header .logo {
+        position: absolute;
+        right: 90px;
+        top: 0px;
+    }
+
+        .header .logo .caption {
+            margin: 10px 0px 0px 0px;
+            display: block;
+        }
+
+            .header .logo .caption .title {
+                font-size: 1em;
+                color: #fff;
+                direction: rtl;
+                display: block;
+                float: right;
+                padding-top: 15px;
+            }
+
+            .header .logo .caption .sys-title {
+                font-size: 2em;
+                color: #ec8523;
+                direction: rtl;
+                display: block;
+                float: right;
+                margin-right: 10px;
+                margin-top: 5px;
+            }
+
+            .header .logo .caption .detail {
+                font-size: 0.8em;
+                color: #0c3a4a;
+                direction: rtl;
+                display: block;
+                margin-bottom: 5px;
+                margin-top: 5px;
+            }
+
+    .header .exit {
+        position: absolute;
+        left: 10px;
+        top: 20px;
+        color: #c40505;
+        font-size: 1.2em;
+        text-decoration: none;
+    }
+
+    .header .info {
+        position: absolute;
+        left: 70px;
+        top: 20px;
+    }
+
+        .header .info .fullname {
+            color: #ffffff;
+            font-size: 1.1em;
+        }
+
+.menu {
+    background-color: #ff6a00;
+    height: 60px;
+    margin: 0px;
+}
+
+    .menu .wrap {
+        width: 1000px;
+        margin: 0px auto 0px auto;
+        text-align: center;
+    }
+
+    .menu a {
+        text-decoration: none;
+        display: block;
+        height: 25px;
+        float: right;
+        padding: 35px 5px 0px 05px;
+        text-align: center;
+        color: #fff;
+        margin-left: 10px;
+        font-size: 0.9em;
+    }
+
+        .menu a:hover {
+            background-color: #ec8523;
+        }
+
+    .menu .submenu {
+        display: none;
+        position: absolute;
+        width: 150px;
+        z-index: 1000;
+    }
+
+        .menu .submenu .arrow {
+            height: 10px;
+            width: 100%;
+            background-image: url('../../component/images/tas.png');
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
+
+        .menu .submenu .items {
+            background-color: #e56306;
+            padding: 10px;
+        }
+
+            .menu .submenu .items a {
+                display: block;
+                font-size: 0.9em;
+                color: #fff;
+                float: none;
+                width: auto;
+                height: auto;
+                padding: 10px;
+            }
+
+                .menu .submenu .items a:hover {
+                    background-color: #34858d;
+                }
+
+    .menu a.oprator {
+        background-image: url('../../component/images/addoprator.png');
+        background-position: center 5px;
+        background-repeat: no-repeat;
+    }
+
+    .menu a.users {
+        background-image: url('../../component/images/users.png');
+        background-position: center 5px;
+        background-repeat: no-repeat;
+    }
+
+    .menu a.setting {
+        background-image: url('../../component/images/setting.png');
+        background-position: center 5px;
+        background-repeat: no-repeat;
+    }
+
+    .menu a.relations {
+        background-image: url('../../component/images/relations.png');
+        background-position: center 5px;
+        background-repeat: no-repeat;
+    }
+
+    .menu a.content2 {
+        background-image: url('../../component/images/tag.png');
+        background-position: center 5px;
+        background-repeat: no-repeat;
+    }
+
+    .menu a.news {
+        background-image: url('../../component/images/news.png');
+        background-position: center 5px;
+        background-repeat: no-repeat;
+    }
+
+    .menu a.event {
+        background-image: url('../../component/images/event.png');
+        background-position: center 5px;
+        background-repeat: no-repeat;
+    }
+
+    .menu a.io {
+        background-image: url('../../component/images/io.png');
+        background-position: center 5px;
+        background-repeat: no-repeat;
+    }
+
+    .menu a.pub {
+        background-image: url('../../component/images/pub.png');
+        background-position: center 5px;
+        background-repeat: no-repeat;
+    }
+
+    .menu a.download {
+        background-image: url('../../component/images/download.png');
+        background-position: center 5px;
+        background-repeat: no-repeat;
+    }
+
+    .menu a.chart {
+        background-image: url('../../component/images/chartn.png');
+        background-position: center 5px;
+        background-repeat: no-repeat;
+    }
+    .menu a.poem { /*soheila--poll*/
+        background-image: url('../../component/images/poem.png');
+        background-position: center 5px;
+        background-repeat: no-repeat;
+    }
+    .menu a.ican { /*soheila--ican*/
+        background-image: url('../../component/images/ican.png');
+        background-position: center 5px;
+        background-repeat: no-repeat;
+    }
+    .menu a.Competition { 
+        background-image: url('../../component/images/mosabeghe.png');
+        background-position: center 5px;
+        background-repeat: no-repeat;
+    }
+
+.path {
+    height: 30px;
+    margin: 15px 0px 0px 0px;
+}
+
+    .path .loc {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        float: right;
+        /*margin: 0px 0px 0px 10px;*/
+        font-size: 0.8em;
+    }
+
+    .path .spacer {
+        float: right;
+        display: block;
+        padding: 10px;
+        font-size: 0.9em;
+        color: #555050;
+    }
+
+    .path .spacerer {
+        float: right;
+        display: block;
+        padding: 10px 0px;
+        font-size: 0.9em;
+        color: #555050;
+    }
+
+    .path .history {
+        color: #0c3a4a;
+        cursor: pointer;
+    }
+
+        .path .history:hover {
+            background-color: #b0b0b0;
+        }
+
+    .path .none {
+        color: #979696;
+        cursor: default;
+    }

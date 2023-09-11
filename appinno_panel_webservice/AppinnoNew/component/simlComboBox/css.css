@@ -1,0 +1,50 @@
+﻿.select {
+    background-position: 5px 10px;
+    color: #0380db;
+    font-size: 0.9em;
+    text-align: right;
+    display: block;
+    background-color: #fff;
+    height: 22px;
+    background-image: url('images/arrow.png');
+    background-repeat: no-repeat;
+    cursor: pointer;
+    padding-top: 8px;
+    overflow: hidden;
+    padding-left: 26px;
+    border:1px solid #e2e2e2;
+}
+
+    .select .selected {
+        text-align: right;
+        display: block;
+        margin-right: 5px;
+    }
+
+.list-simlcombobox {
+    position: absolute;
+    background-color: #fff;
+    z-index: 10000;
+    -moz-box-shadow: -2px 3px 5px rgba(68,68,68,0.6);
+    -webkit-box-shadow: -2px 3px 5px rgba(68,68,68,0.6);
+    box-shadow: -2px 3px 5px rgba(68,68,68,0.6);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+    zoom: 1;
+    overflow:hidden;
+    max-height:300px;
+    overflow-y:scroll;
+}
+
+.option {
+    text-align: right;
+    display: block;
+    margin-right: 0px;
+    padding: 5px 10px 5px 5px;
+    cursor: pointer;
+    font-size:0.8em;
+}
+
+    .option:hover {
+        background-color: #d6ede8;
+    }

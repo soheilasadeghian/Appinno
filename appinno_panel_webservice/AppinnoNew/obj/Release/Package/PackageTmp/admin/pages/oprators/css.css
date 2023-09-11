@@ -1,0 +1,247 @@
+﻿.right-panel {
+    width: 240px;
+    float: right;
+    padding: 10px 0px 10px 0px;
+}
+
+.left-panel {
+    width: 750px;
+    float: right;
+    padding: 10px 10px 10px 0px;
+}
+
+.header-group {
+    height: 20px;
+    text-align: right;
+    padding: 8px 5px 5px 5px;
+    font-size: 0.85em;
+    display: block;
+    background-color: #2fc2da;
+    /*border-right: 3px solid #437a81;*/
+    margin-bottom: 3px;
+    color: #fff;
+}
+
+
+.group-list {
+    background-color: #fff;
+    padding: 5px;
+}
+
+    .group-list .selected {
+    }
+
+    .group-list .item {
+        overflow: hidden;
+        background-color: #d5f2ff;
+        margin: 0px 0px 3px 0px;
+    }
+
+        .group-list .item .title {
+            height: 17px;
+            text-align: right;
+            padding: 8px 5px 5px 5px;
+            font-size: 0.7em;
+            display: block;
+            cursor: pointer;
+            margin-bottom: 2px;
+            overflow: hidden;
+        }
+
+        .group-list .item .info {
+            float: left;
+            display: block;
+            width: 180px;
+            height: 17px;
+            text-align: right;
+            padding: 8px 5px 5px 5px;
+            font-size: 0.7em;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .group-list .item .tools {
+            float: left;
+            display: block;
+            width: 100px;
+            height: 30px;
+        }
+
+            .group-list .item .tools .delete {
+                background-image: url('../../component/images/delete-red.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+                height: 30px;
+                width: 30px;
+                display: block;
+                float: left;
+                cursor: pointer;
+            }
+
+            .group-list .item .tools .edit {
+                background-image: url('../../component/images/edit-green.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+                height: 30px;
+                width: 30px;
+                display: block;
+                float: left;
+                cursor: pointer;
+            }
+
+        .group-list .item:hover {
+            background-color: #69cbdf;
+            color: #fff;
+        }
+
+    .group-list .insert {
+        height: 33px;
+        margin: 5px 0px 0px 0px;
+    }
+
+        .group-list .insert .button {
+            height: 33px !important;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 5px;
+            width: 43px;
+            border: 1px solid #76c6db;
+            color: #00abcb !important;
+            cursor: pointer;
+            float: left;
+            background-color: #e1e1e1;
+            outline: none;
+        }
+
+            .group-list .insert .button:hover {
+                background-color: #cac8c8;
+            }
+
+    .group-list .edit-panel .button:hover {
+        background-color: #cac8c8;
+    }
+
+.pager {
+    float: right;
+    margin-top: 5px;
+}
+
+    .pager .page {
+        display: block;
+        background-color: #74b4b5;
+        color: #fff;
+        padding: 5px;
+        font-size: 0.8em;
+        cursor: pointer;
+        width: 30px;
+        float: right;
+        text-align: center;
+    }
+
+        .pager .page:hover {
+            background-color: #378a8b;
+        }
+
+    .pager .selected {
+        background-color: #267172;
+        cursor: default;
+    }
+
+
+.new-oprator-window {
+    display: none;
+}
+
+    .new-oprator-window .background {
+        position: fixed;
+        z-index: 1001;
+        top: 0;
+        left: 0;
+        bottom: 0px;
+        right: 0px;
+        background-image: url('../../component/images/opacitybg.png');
+        background-repeat: repeat;
+    }
+
+    .new-oprator-window .window {
+        position: absolute;
+        z-index: 1002;
+        top: 50%;
+        left: 50%;
+        width: 625px;
+        height: 210px;
+        background-color: #fff;
+        border: 1px solid #515151;
+        margin: -150px 0px 0px -350px;
+        padding: 10px;
+    }
+    .new-oprator-window .window .window-header
+    {
+        height:25px;
+        margin:0px 10px 0px 10px;
+        text-align:center;
+        padding-top:5px;
+        
+    }
+    .new-oprator-window .window .window-header span
+    {
+        color:#fff;
+        font-size:0.9em;
+    }
+        .new-oprator-window .window .oprator-name {
+            height: 30px;
+            margin: 0px 10px 5px auto;
+            float: right;
+        }
+
+        .new-oprator-window .window .combo {
+            height: 28px;
+            margin: 0px 0px 5px auto;
+            width: 202px;
+            float: right;
+        }
+
+            .new-oprator-window .window .combo .select {
+                height: 20px !important;
+            }
+
+        .new-oprator-window .window .save {
+            height: 33px !important;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 5px;
+            width: 43px;
+            border: 1px solid #76c6db;
+            color: #00abcb !important;
+            cursor: pointer;
+            float: left;
+            background-color: #e1e1e1;
+            outline: none;
+            margin-left: 10px;
+        }
+
+            .new-oprator-window .window .save:hover {
+                background-color: #cac8c8;
+            }
+
+
+        .new-oprator-window .window .oprator-name span {
+            display: block;
+            float: right;
+            width: 90px;
+            color: #fff;
+            font-size: 0.8em;
+            text-align: right;
+            padding: 8px 5px 0px 0px;
+            background-color: #545e6d;
+            height: 22px;
+        }
+
+        .new-oprator-window .window .oprator-name input {
+            height: 18px;
+            border: 1px solid #545e6d;
+            width: 190px;
+            color: #545e6d;
+            padding: 5px;
+            font-size: 0.8em;
+        }

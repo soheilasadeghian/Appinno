@@ -1,0 +1,179 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="AppinnoNew.admin.master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="../component/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../component/jquery/jquery-migrate-1.0.0.js"></script>
+    <script src="component/js/Core.js"></script>
+    <link href="component/css/main.css" rel="stylesheet" />
+    <link href="pages/master/css.css" rel="stylesheet" />
+    <script src="pages/master/js.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header mci-1b">
+            <div class="content">
+                <a class="appinno-logo" href="dashboard.aspx">
+                    <img class="appinno-logo" src="component/images/mci_logo.png" alt="اپی‌نو" />
+                </a>
+                <div class="logo">
+                    <div class="caption">
+                        <a class="title" href="dashboard.aspx" style="text-decoration: none;">سامانه مدیریت محتوا </a>
+                        <a class="sys-title" href="dashboard.aspx" style="text-decoration: none;">اَپی‌نو </a>
+                    </div>
+                </div>
+
+                <a class="exit" href="logout.aspx">خروج</a>
+                <div class="info">
+                    <span id="fullname" runat="server" class="fullname"></span>
+                </div>
+
+            </div>
+        </div>
+        <div runat="server" id="menu" class="menu mci-2b shadow">
+            <div class="content">
+                <div class="wrap">
+                    <a id="menu_access" class="oprator" title="اپراتورها" href="#">دسترسی</a>
+                    <div class="submenu ">
+                        <div class="arrow"></div>
+                        <div class="items shadow mci-1b">
+                            <a id="manage_access" href="access.aspx">مدیریت نقش ها</a>
+                            <a id="manage_oprator" href="oprators.aspx">مدیریت اپراتورها</a>
+                        </div>
+                    </div>
+                    <a id="menu_users" class="users" title="کاربران" href="#">کاربران</a>
+                    <div class="submenu ">
+                        <div class="arrow"></div>
+                        <div class="items shadow mci-1b">
+                            <a id="manage-group" href="groups.aspx">مدیریت گروه ها</a>
+                            <a id="manage-userlist" href="userlist.aspx">لیست کاربران</a>
+                        </div>
+                    </div>
+                    <a id="menu_relations" class="relations" title="مدیریت" href="#">مدیریت</a>
+                    <div class="submenu ">
+                        <div class="arrow"></div>
+                        <div class="items shadow mci-1b">
+                            <a href="partners.aspx">معرفی همکاران</a>
+                            <a href="push.aspx">ارسال پیام مدیر</a>
+                            <a href="message.aspx">ارسال پیام کاربر</a>
+                            <a href="setting.aspx">تنظیمات</a>
+                        </div>
+                    </div>
+                    <a id="menu_content2" class="content2" title="مدیریت محتوا" href="#">مدیریت محتوا</a>
+                    <div class="submenu ">
+                        <div class="arrow"></div>
+                        <div class="items shadow mci-1b">
+                            <a href="tag.aspx">مدیریت تگ</a>
+                        </div>
+                    </div>
+                    <a id="menu_news" class="news" title="اخبار" href="#">خبرها</a>
+                    <div class="submenu ">
+                        <div class="arrow"></div>
+                        <div class="items shadow mci-1b">
+                            <a id="comment-news" href="cnews.aspx">لیست نظرات</a>
+                            <a href="newslist.aspx">لیست اخبار</a>
+                            <a id="manage-news" href="news.aspx">درج خبر جدید</a>
+
+                        </div>
+                    </div>
+                    <a id="menu_event" class="event" title="رویداد" href="#">رویدادها</a>
+                    <div class="submenu ">
+                        <div class="arrow"></div>
+                        <div class="items shadow mci-1b">
+                            <a id="comment-event" href="cevent.aspx">لیست نظرات</a>
+                            <a href="eventslist.aspx">لیست رویدادها</a>
+                            <a id="manage-events" href="events.aspx">درج رویداد جدید</a>
+                        </div>
+                    </div>
+                    <a id="menu_io" class="io" title="معرفی سازمان" href="#">معرفی سازمان</a>
+                    <div class="submenu ">
+                        <div class="arrow"></div>
+                        <div class="items shadow mci-1b">
+                            <a id="comment-io" href="cio.aspx">لیست نظرات</a>
+                            <a href="iolist.aspx">لیست سازمان ها</a>
+                            <a id="manage-io" href="io.aspx" style="padding: 10px 8px;">درج سازمان جدید</a>
+                        </div>
+                    </div>
+                    <a id="menu_pub" class="pub" title="انتشارات" href="#">انتشارات</a>
+                    <div class="submenu ">
+                        <div class="arrow"></div>
+                        <div class="items shadow mci-1b">
+                            <a id="comment-publication" href="cpublication.aspx">لیست نظرات</a>
+                            <a href="publicationlist.aspx">لیست انتشارات</a>
+                            <a id="manage-pub" href="publication.aspx">درج انتشارات</a>
+                        </div>
+                    </div>
+                    <%--<a id="menu_download" class="download" title="دانلود مقاله و کتاب" href="#">دانلود مقاله و کتاب</a>
+                    <div class="submenu ">
+                        <div class="arrow"></div>
+                        <div class="items shadow mci-1b">
+                             <a id="comment-download" href="cdownload.aspx">لیست نظرات</a>
+                            <a href="downloadlist.aspx">لیست دانلودها</a>
+                            <a id="manage-download" href="download.aspx">درج دانلود جدید</a>
+                        </div>
+                    </div>--%>
+                    <%--<a id="menu_chart" class="chart" title="نمودار" href="#">نمودار</a>
+                    <div class="submenu ">
+                        <div class="arrow"></div>
+                        <div class="items shadow mci-1b">
+                             <a id="comment-chart" href="creport.aspx">لیست نظرات</a>
+                            <a href="reportlist.aspx">لیست نمودارها</a>
+                            <a id="manage-chart" href="report.aspx">درج نمودار جدید</a>
+                        </div>
+                    </div>--%>
+                    <%--soheila-start-poll"--%>
+                    <a id="menu_poem" class="poem" title="نظرسنجی" href="#">نظرسنجی</a>
+                    <div class="submenu ">
+                        <div class="arrow"></div>
+                        <div class="items shadow mci-1b">
+                            <a id="manage_poem_list" href="polllist.aspx">لیست نظرسنجی</a>
+                             <a id="manage_poll" href="poll.aspx">درج نظرسنجی</a>
+                        </div>
+                    </div>
+                    <%--soheila-end-poll"--%>
+                    <%--soheila-start-ican"--%>
+                    <a id="menu_ican" class="ican" title="من می توانم" href="#">من می توانم</a>
+                    <div class="submenu ">
+                        <div class="arrow"></div>
+                        <div class="items shadow mci-1b">
+                            <a id="comment-ican" href="cican.aspx">لیست نظرات</a>
+                            <a id="manage_ican_list" href="icanlist.aspx">لیست توانایی ها</a>
+                        </div>
+                    </div>
+                    <%--soheila-end-ican"--%>
+                    <a id="menu_competition" class="Competition" title="مسابقات" href="#">مسابقات</a>
+                    <div class="submenu">
+                        <div class="arrow"></div>
+                        <div class="items shadow mci-1b">
+                            <a id="bestIdeasCompetition" href="bestIdeasCompetitionlist.aspx">ایده برتر</a>
+                            <a id="creativityCompetition" href="creativityCompetitionlist.aspx">خلاقیت</a>
+                            <a id="myIran" href="myIranlist.aspx">ایران من</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="content">
+                <div class="path">
+                    <asp:ContentPlaceHolder ID="path" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <div class="clear"></div>
+                    <hr />
+                </div>
+
+                <asp:ContentPlaceHolder ID="content" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+

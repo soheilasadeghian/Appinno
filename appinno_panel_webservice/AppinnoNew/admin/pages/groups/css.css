@@ -1,0 +1,599 @@
+﻿.right-panel {
+    width: 490px;
+    float: right;
+    padding: 10px 0px 10px 10px;
+}
+
+.left-panel {
+    width: 490px;
+    float: right;
+    padding: 10px 10px 10px 0px;
+}
+
+.header-group {
+    height: 20px;
+    text-align: right;
+    padding: 8px 5px 5px 5px;
+    font-size: 0.85em;
+    display: block;
+    background-color: #2fc2da;
+    /*border-right: 3px solid #437a81;*/
+    margin-bottom: 3px;
+    color: #fff;
+}
+
+.header-subgroup {
+    height: 20px;
+    text-align: right;
+    padding: 8px 5px 5px 5px;
+    font-size: 0.85em;
+    display: block;
+    background-color: #2fc2da;
+    /*border-right: 3px solid #437a81;*/
+    margin-bottom: 3px;
+    color: #fff;
+}
+
+.group-list {
+    background-color: #fff;
+    padding: 5px;
+}
+
+    .group-list .selected {
+        background-color: #57c0d5 !important;
+        color: #fff;
+    }
+
+    .group-list .item {
+        overflow: hidden;
+        background-color: #d5f2ff;
+        margin-bottom: 3px;
+    }
+
+        .group-list .item .title {
+            height: 17px;
+            text-align: right;
+            padding: 8px 5px 5px 5px;
+            font-size: 0.7em;
+            display: block;
+            cursor: pointer;
+            margin-bottom: 2px;
+            overflow: hidden;
+        }
+
+        .group-list .item .tools {
+            float: left;
+            display: block;
+            width: 100px;
+            height: 30px;
+        }
+
+            .group-list .item .tools .delete {
+                background-image: url('../../component/images/delete-red.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+                height: 30px;
+                width: 30px;
+                display: block;
+                float: left;
+                cursor: pointer;
+            }
+
+            .group-list .item .tools .edit {
+                background-image: url('../../component/images/edit-green.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+                height: 30px;
+                width: 30px;
+                display: block;
+                float: left;
+                cursor: pointer;
+            }
+
+            .group-list .item .tools .push {
+                background-image: url('../../component/images/push.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+                height: 30px;
+                width: 30px;
+                display: block;
+                float: left;
+            }
+
+        .group-list .item:hover {
+            background-color: #69cbdf;
+            color: #fff;
+        }
+
+    .group-list .insert {
+        height: 33px;
+        margin: 5px 0px 0px 0px;
+    }
+
+
+
+        .group-list .insert .button {
+            height: 33px !important;
+            font-size: 0.95em;
+            text-align: center;
+            padding: 5px;
+            width: 43px;
+            border: 1px solid #76c6db;
+            color: #00abcb !important;
+            cursor: pointer;
+            float: left;
+            background-color: #e1e1e1;
+            outline: none;
+        }
+
+            .group-list .insert .button:hover {
+                background-color: #cac8c8;
+            }
+
+
+.new-group-window {
+    display: none;
+}
+
+    .new-group-window .background {
+        position: fixed;
+        z-index: 1001;
+        top: 0;
+        left: 0;
+        bottom: 0px;
+        right: 0px;
+        background-image: url('../../component/images/opacitybg.png');
+        background-repeat: repeat;
+    }
+
+    .new-group-window .window {
+        position: absolute;
+        z-index: 1002;
+        top: 50%;
+        left: 50%;
+        width: 420px;
+        height: 120px;
+        background-color: #fff;
+        border: 1px solid #515151;
+        margin: -50px 0px 0px -210px;
+        padding: 10px;
+    }
+
+        .new-group-window .window .window-header {
+            height: 25px;
+            margin: 0px 10px 0px 10px;
+            text-align: center;
+            padding-top: 5px;
+        }
+
+            .new-group-window .window .window-header span {
+                color: #fff;
+                font-size: 0.9em;
+            }
+
+        .new-group-window .window .group-title {
+            height: 30px;
+            margin: 0px 10px 5px auto;
+            float: right;
+        }
+
+        .new-group-window .window .save {
+            height: 33px !important;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 5px;
+            width: 43px;
+            border: 1px solid #76c6db;
+            color: #00abcb !important;
+            cursor: pointer;
+            float: left;
+            background-color: #e1e1e1;
+            outline: none;
+            margin-left: 10px;
+        }
+
+            .new-group-window .window .save:hover {
+                background-color: #cac8c8;
+            }
+
+
+        .new-group-window .window .group-title span {
+            display: block;
+            float: right;
+            width: 90px;
+            color: #fff;
+            font-size: 0.8em;
+            text-align: right;
+            padding: 8px 5px 0px 0px;
+            background-color: #545e6d;
+            height: 22px;
+        }
+
+        .new-group-window .window .group-title input {
+            height: 18px;
+            border: 1px solid #545e6d;
+            width: 293px;
+            color: #545e6d;
+            padding: 5px;
+            font-size: 0.8em;
+        }
+
+.new-subgroup-window {
+    display: none;
+}
+
+    .new-subgroup-window .background {
+        position: fixed;
+        z-index: 1001;
+        top: 0;
+        left: 0;
+        bottom: 0px;
+        right: 0px;
+        background-image: url('../../component/images/opacitybg.png');
+        background-repeat: repeat;
+    }
+
+    .new-subgroup-window .window {
+        position: absolute;
+        z-index: 1002;
+        top: 50%;
+        left: 50%;
+        width: 420px;
+        /*height: 120px;*/
+        background-color: #fff;
+        border: 1px solid #515151;
+        margin: -50px 0px 0px -210px;
+        padding: 10px;
+    }
+
+        .new-subgroup-window .window .window-header {
+            height: 25px;
+            margin: 0px 10px 0px 10px;
+            text-align: center;
+            padding-top: 5px;
+        }
+
+            .new-subgroup-window .window .window-header span {
+                color: #fff;
+                font-size: 0.9em;
+            }
+
+        .new-subgroup-window .window .subgroup-title {
+            height: 30px;
+            margin: 0px 10px 5px auto;
+            float: right;
+        }
+
+        .new-subgroup-window .window .save {
+            height: 33px !important;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 5px;
+            width: 43px;
+            border: 1px solid #76c6db;
+            color: #00abcb !important;
+            cursor: pointer;
+            float: left;
+            background-color: #e1e1e1;
+            outline: none;
+            margin-left: 10px;
+        }
+
+            .new-subgroup-window .window .save:hover {
+                background-color: #cac8c8;
+            }
+
+        .new-subgroup-window .window .subgroup-name {
+            height: 30px;
+            margin: 0px 0px 5px auto;
+            float: right;
+        }
+
+            .new-subgroup-window .window .subgroup-name span {
+                display: block;
+                float: right;
+                width: 70px;
+                color: #fff;
+                font-size: 0.8em;
+                text-align: right;
+                padding: 8px 5px 0px 0px;
+                background-color: #545e6d;
+                height: 22px;
+            }
+
+        .new-subgroup-window .window .combo {
+            height: 28px;
+            margin: 0px 0px 5px auto;
+            width: 120px;
+            float: right;
+        }
+
+            .new-subgroup-window .window .combo .select {
+                height: 20px !important;
+            }
+
+        .new-subgroup-window .window .subgroup-title input {
+            height: 18px;
+            border: 1px solid #545e6d;
+            width: 312px;
+            color: #545e6d;
+            padding: 5px;
+            font-size: 0.8em;
+        }
+
+        .new-subgroup-window .window .subgroup-title span {
+            display: block;
+            float: right;
+            width: 70px;
+            color: #fff;
+            font-size: 0.8em;
+            text-align: right;
+            padding: 8px 5px 0px 0px;
+            background-color: #545e6d;
+            height: 22px;
+        }
+
+        .new-subgroup-window .window .check {
+            margin: 0px 10px 0px 0px;
+        }
+
+        .new-subgroup-window .window label {
+            display: inline-block;
+            color: #000;
+            font-size: 0.8em;
+            text-align: right;
+            padding: 3px 0px 0px 0px;
+            height: 22px;
+            cursor: pointer;
+        }
+
+        .new-subgroup-window .window .insert-subgroup {
+            height: 33px !important;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 5px;
+            width: 195px;
+            border: 1px solid #76c6db;
+            color: #00abcb !important;
+            cursor: pointer;
+            float: right;
+            background-color: #e1e1e1;
+            outline: none;
+            margin-left: 10px;
+            margin: 0px 0px 0px 0px;
+        }
+
+            .new-subgroup-window .window .insert-subgroup:hover {
+                background-color: #cac8c8;
+            }
+
+        .new-subgroup-window .window .sub-right {
+            float: right;
+        }
+
+        .new-subgroup-window .window .sub-left {
+            float: right;
+            overflow-y: scroll;
+            height: 105px;
+            padding-right: 5px;
+        }
+
+            .new-subgroup-window .window .sub-left .record {
+                height: 30px;
+                width: 175px;
+                /*background-color: #54c5d0;*/
+                margin-bottom: 3px;
+            }
+
+                .new-subgroup-window .window .sub-left .record span {
+                    display: block;
+                    font-size: 0.7em;
+                    color: #000;
+                    padding: 8px 5px 0px 0px;
+                    float: right;
+                }
+
+                .new-subgroup-window .window .sub-left .record label {
+                    display: block;
+                    font-size: 0.6em;
+                    color: #fe0000;
+                    float: left;
+                    padding: 8px 10px 0px 10px;
+                    /*background-color:#34858d;*/
+                    cursor: pointer;
+                }
+
+                    .new-subgroup-window .window .sub-left .record label:hover {
+                        background-color: #aabfc1;
+                    }
+
+
+/*----*/
+
+.edit-subgroup-window {
+    display: none;
+}
+
+    .edit-subgroup-window .background {
+        position: fixed;
+        z-index: 1001;
+        top: 0;
+        left: 0;
+        bottom: 0px;
+        right: 0px;
+        background-image: url('../../component/images/opacitybg.png');
+        background-repeat: repeat;
+    }
+
+    .edit-subgroup-window .window {
+        position: absolute;
+        z-index: 1002;
+        top: 50%;
+        left: 50%;
+        width: 420px;
+        /*height: 120px;*/
+        background-color: #fff;
+        border: 1px solid #515151;
+        margin: -50px 0px 0px -210px;
+        padding: 10px;
+    }
+
+        .edit-subgroup-window .window .window-header {
+            height: 25px;
+            margin: 0px 10px 0px 10px;
+            text-align: center;
+            padding-top: 5px;
+        }
+
+            .edit-subgroup-window .window .window-header span {
+                color: #fff;
+                font-size: 0.9em;
+            }
+
+        .edit-subgroup-window .window .subgroup-title {
+            height: 30px;
+            margin: 0px 10px 5px auto;
+            float: right;
+        }
+
+        .edit-subgroup-window .window .save {
+            height: 33px !important;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 5px;
+            width: 43px;
+            border: 1px solid #76c6db;
+            color: #00abcb !important;
+            cursor: pointer;
+            float: left;
+            background-color: #e1e1e1;
+            outline: none;
+            margin-left: 10px;
+        }
+
+            .edit-subgroup-window .window .save:hover {
+                background-color: #cac8c8;
+            }
+
+        .edit-subgroup-window .window .subgroup-name {
+            height: 30px;
+            margin: 0px 0px 5px auto;
+            float: right;
+        }
+
+            .edit-subgroup-window .window .subgroup-name span {
+                display: block;
+                float: right;
+                width: 70px;
+                color: #fff;
+                font-size: 0.8em;
+                text-align: right;
+                padding: 8px 5px 0px 0px;
+                background-color: #545e6d;
+                height: 22px;
+            }
+
+        .edit-subgroup-window .window .combo {
+            height: 28px;
+            margin: 0px 0px 5px auto;
+            width: 120px;
+            float: right;
+        }
+
+            .edit-subgroup-window .window .combo .select {
+                height: 20px !important;
+            }
+
+        .edit-subgroup-window .window .subgroup-title input {
+            height: 18px;
+            border: 1px solid #545e6d;
+            width: 312px;
+            color: #545e6d;
+            padding: 5px;
+            font-size: 0.8em;
+        }
+
+        .edit-subgroup-window .window .subgroup-title span {
+            display: block;
+            float: right;
+            width: 70px;
+            color: #fff;
+            font-size: 0.8em;
+            text-align: right;
+            padding: 8px 5px 0px 0px;
+            background-color: #545e6d;
+            height: 22px;
+        }
+
+        .edit-subgroup-window .window .check {
+            margin: 0px 10px 0px 0px;
+        }
+
+        .edit-subgroup-window .window label {
+            display: inline-block;
+            color: #000;
+            font-size: 0.8em;
+            text-align: right;
+            padding: 3px 0px 0px 0px;
+            height: 22px;
+            cursor: pointer;
+        }
+
+        .edit-subgroup-window .window .insert-subgroup {
+            height: 33px !important;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 5px;
+            width: 195px;
+            border: 1px solid #76c6db;
+            color: #00abcb !important;
+            cursor: pointer;
+            float: right;
+            background-color: #e1e1e1;
+            outline: none;
+            margin-left: 10px;
+            margin: 0px 0px 0px 0px;
+        }
+
+            .edit-subgroup-window .window .edit-subgroup:hover {
+                background-color: #cac8c8;
+            }
+
+        .edit-subgroup-window .window .sub-right {
+            float: right;
+        }
+
+        .edit-subgroup-window .window .sub-left {
+            float: right;
+            overflow-y: scroll;
+            height: 105px;
+            padding-right: 5px;
+        }
+
+            .edit-subgroup-window .window .sub-left .record {
+                height: 30px;
+                width: 175px;
+                /*background-color: #54c5d0;*/
+                margin-bottom:3px;
+            }
+
+                .edit-subgroup-window .window .sub-left .record span {
+                    display: block;
+                    font-size: 0.7em;
+                    color: #000;
+                    padding: 8px 5px 0px 0px;
+                    float: right;
+                }
+                .edit-subgroup-window .window .sub-left .record label {
+                    display: block;
+                    font-size: 0.6em;
+                    color: #fe0000;
+                    float: left;
+                    padding: 8px 10px 0px 10px;
+                    /*background-color:#34858d;*/
+                    cursor:pointer;
+                }
+                 .edit-subgroup-window .window .sub-left .record label:hover
+                 {
+                     background-color:#aabfc1;
+                 }

@@ -1,0 +1,1022 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AppInnonew" Class="DataAccessDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=172.16.32.33;Initial Catalog=AppInnonew;Persist Security Info=True;User ID=appinno" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="AppInnonewConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.accessTbl" Member="accessTbls">
+    <Type Name="accessTbl">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="per" Type="System.String" DbType="NVarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="accessID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="accessTbl_userTbl" Member="userTbls" ThisKey="ID" OtherKey="accessID" Type="userTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.userTbl" Member="userTbls">
+    <Type Name="userTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="accessID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="family" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="emailtell" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="lastedit" Type="System.String" DbType="NVarChar(550) NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="userTbl_bestIdeaCompetitionsTbl" Member="bestIdeaCompetitionsTbls" ThisKey="ID" OtherKey="creatorID" Type="bestIdeaCompetitionsTbl" />
+      <Association Name="userTbl_creativityCompetitionTbl" Member="creativityCompetitionTbls" ThisKey="ID" OtherKey="userID" Type="creativityCompetitionTbl" />
+      <Association Name="userTbl_myIranTbl" Member="myIranTbls" ThisKey="ID" OtherKey="userID" Type="myIranTbl" />
+      <Association Name="userTbl_pollTbl" Member="pollTbls" ThisKey="ID" OtherKey="userID" Type="pollTbl" />
+      <Association Name="userTbl_pushMessageTbl" Member="pushMessageTbls" ThisKey="ID" OtherKey="creatorID" Type="pushMessageTbl" />
+      <Association Name="accessTbl_userTbl" Member="accessTbl" ThisKey="accessID" OtherKey="ID" Type="accessTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.answerContentTbl" Member="answerContentTbls">
+    <Type Name="answerContentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="answerID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="contentType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="pri" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="answerTbl_answerContentTbl" Member="answerTbl" ThisKey="answerID" OtherKey="ID" Type="answerTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.answerTbl" Member="answerTbls">
+    <Type Name="answerTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="creativityCompetitionID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isCorrect" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="isWinner" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="answerTbl_answerContentTbl" Member="answerContentTbls" ThisKey="ID" OtherKey="answerID" Type="answerContentTbl" />
+      <Association Name="creativityCompetitionTbl_answerTbl" Member="creativityCompetitionTbl" ThisKey="creativityCompetitionID" OtherKey="ID" Type="creativityCompetitionTbl" IsForeignKey="true" />
+      <Association Name="mUserTbl_answerTbl" Member="mUserTbl" ThisKey="mUserID" OtherKey="ID" Type="mUserTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.bestIdeaCompetitionsContentTbl" Member="bestIdeaCompetitionsContentTbls">
+    <Type Name="bestIdeaCompetitionsContentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="bestIdeaCompetitionsID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="contentType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="pri" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="bestIdeaCompetitionsTbl_bestIdeaCompetitionsContentTbl" Member="bestIdeaCompetitionsTbl" ThisKey="bestIdeaCompetitionsID" OtherKey="ID" Type="bestIdeaCompetitionsTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.bestIdeaCompetitionsTagTbl" Member="bestIdeaCompetitionsTagTbls">
+    <Type Name="bestIdeaCompetitionsTagTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tagID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="bestIdeaCompetitionsID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="bestIdeaCompetitionsTbl_bestIdeaCompetitionsTagTbl" Member="bestIdeaCompetitionsTbl" ThisKey="bestIdeaCompetitionsID" OtherKey="ID" Type="bestIdeaCompetitionsTbl" IsForeignKey="true" />
+      <Association Name="tagTbl_bestIdeaCompetitionsTagTbl" Member="tagTbl" ThisKey="tagID" OtherKey="ID" Type="tagTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.bestIdeaCompetitionsTbl" Member="bestIdeaCompetitionsTbls">
+    <Type Name="bestIdeaCompetitionsTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="creatorID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="startDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="endDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="resultVoteDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="isSendNotification" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="notificationText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="bestIdeaCompetitionsTbl_bestIdeaCompetitionsContentTbl" Member="bestIdeaCompetitionsContentTbls" ThisKey="ID" OtherKey="bestIdeaCompetitionsID" Type="bestIdeaCompetitionsContentTbl" />
+      <Association Name="bestIdeaCompetitionsTbl_bestIdeaCompetitionsTagTbl" Member="bestIdeaCompetitionsTagTbls" ThisKey="ID" OtherKey="bestIdeaCompetitionsID" Type="bestIdeaCompetitionsTagTbl" />
+      <Association Name="bestIdeaCompetitionsTbl_ideasTbl" Member="ideasTbls" ThisKey="ID" OtherKey="bestIdeaCompetitionsID" Type="ideasTbl" />
+      <Association Name="userTbl_bestIdeaCompetitionsTbl" Member="userTbl" ThisKey="creatorID" OtherKey="ID" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.chartTbl" Member="chartTbls">
+    <Type Name="chartTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="reportID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="xTitle" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="yValue" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="reportTbl_chartTbl" Member="reportTbl" ThisKey="reportID" OtherKey="ID" Type="reportTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.creativityCompetitionContentTbl" Member="creativityCompetitionContentTbls">
+    <Type Name="creativityCompetitionContentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="creativityCompetitionID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="contentType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="pri" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="creativityCompetitionTbl_creativityCompetitionContentTbl" Member="creativityCompetitionTbl" ThisKey="creativityCompetitionID" OtherKey="ID" Type="creativityCompetitionTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.creativityCompetitionTagTbl" Member="creativityCompetitionTagTbls">
+    <Type Name="creativityCompetitionTagTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tagID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="creativityCompetitionID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="creativityCompetitionTbl_creativityCompetitionTagTbl" Member="creativityCompetitionTbl" ThisKey="creativityCompetitionID" OtherKey="ID" Type="creativityCompetitionTbl" IsForeignKey="true" />
+      <Association Name="tagTbl_creativityCompetitionTagTbl" Member="tagTbl" ThisKey="tagID" OtherKey="ID" Type="tagTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.creativityCompetitionTbl" Member="creativityCompetitionTbls">
+    <Type Name="creativityCompetitionTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="startDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="endDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="isDone" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="isSendNotification" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="notificationText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="doneDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="creativityCompetitionTbl_answerTbl" Member="answerTbls" ThisKey="ID" OtherKey="creativityCompetitionID" Type="answerTbl" />
+      <Association Name="creativityCompetitionTbl_creativityCompetitionContentTbl" Member="creativityCompetitionContentTbls" ThisKey="ID" OtherKey="creativityCompetitionID" Type="creativityCompetitionContentTbl" />
+      <Association Name="creativityCompetitionTbl_creativityCompetitionTagTbl" Member="creativityCompetitionTagTbls" ThisKey="ID" OtherKey="creativityCompetitionID" Type="creativityCompetitionTagTbl" />
+      <Association Name="userTbl_creativityCompetitionTbl" Member="userTbl" ThisKey="userID" OtherKey="ID" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.downloadCommentTbl" Member="downloadCommentTbls">
+    <Type Name="downloadCommentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="downloadID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="fullName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="mobile" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="text" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="downloadTbl_downloadCommentTbl" Member="downloadTbl" ThisKey="downloadID" OtherKey="ID" Type="downloadTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.downloadContentTbl" Member="downloadContentTbls">
+    <Type Name="downloadContentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="downloadID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="contentType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="downloadCount" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="fileType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="fileSize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pri" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="downloadTbl_downloadContentTbl" Member="downloadTbl" ThisKey="downloadID" OtherKey="ID" Type="downloadTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.downloadLikeTbl" Member="downloadLikeTbls">
+    <Type Name="downloadLikeTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="downloadID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="isLike" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="downloadTbl_downloadLikeTbl" Member="downloadTbl" ThisKey="downloadID" OtherKey="ID" Type="downloadTbl" IsForeignKey="true" />
+      <Association Name="mUserTbl_downloadLikeTbl" Member="mUserTbl" ThisKey="userID" OtherKey="ID" Type="mUserTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.downloadSubGroupTbl" Member="downloadSubGroupTbls">
+    <Type Name="downloadSubGroupTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="downloadID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="subGroupID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="downloadTbl_downloadSubGroupTbl" Member="downloadTbl" ThisKey="downloadID" OtherKey="ID" Type="downloadTbl" IsForeignKey="true" />
+      <Association Name="SubGroupTbl_downloadSubGroupTbl" Member="SubGroupTbl" ThisKey="subGroupID" OtherKey="ID" Type="SubGroupTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.downloadTagTbl" Member="downloadTagTbls">
+    <Type Name="downloadTagTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tagID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="downloadID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="downloadTbl_downloadTagTbl" Member="downloadTbl" ThisKey="downloadID" OtherKey="ID" Type="downloadTbl" IsForeignKey="true" />
+      <Association Name="tagTbl_downloadTagTbl" Member="tagTbl" ThisKey="tagID" OtherKey="ID" Type="tagTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.downloadTbl" Member="downloadTbls">
+    <Type Name="downloadTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isPublished" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="viewCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="publishDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="downloadTbl_downloadCommentTbl" Member="downloadCommentTbls" ThisKey="ID" OtherKey="downloadID" Type="downloadCommentTbl" />
+      <Association Name="downloadTbl_downloadContentTbl" Member="downloadContentTbls" ThisKey="ID" OtherKey="downloadID" Type="downloadContentTbl" />
+      <Association Name="downloadTbl_downloadLikeTbl" Member="downloadLikeTbls" ThisKey="ID" OtherKey="downloadID" Type="downloadLikeTbl" />
+      <Association Name="downloadTbl_downloadSubGroupTbl" Member="downloadSubGroupTbls" ThisKey="ID" OtherKey="downloadID" Type="downloadSubGroupTbl" />
+      <Association Name="downloadTbl_downloadTagTbl" Member="downloadTagTbls" ThisKey="ID" OtherKey="downloadID" Type="downloadTagTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.eventCommentTbl" Member="eventCommentTbls">
+    <Type Name="eventCommentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="eventID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="fullName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="mobile" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="text" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="eventsTbl_eventCommentTbl" Member="eventsTbl" ThisKey="eventID" OtherKey="ID" Type="eventsTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.eventsContentTbl" Member="eventsContentTbls">
+    <Type Name="eventsContentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="eventsID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="contentType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="pri" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="eventsTbl_eventsContentTbl" Member="eventsTbl" ThisKey="eventsID" OtherKey="ID" Type="eventsTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.eventsLikeTbl" Member="eventsLikeTbls">
+    <Type Name="eventsLikeTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="eventsID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="isLike" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="eventsTbl_eventsLikeTbl" Member="eventsTbl" ThisKey="eventsID" OtherKey="ID" Type="eventsTbl" IsForeignKey="true" />
+      <Association Name="mUserTbl_eventsLikeTbl" Member="mUserTbl" ThisKey="userID" OtherKey="ID" Type="mUserTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.eventsSubGroupTbl" Member="eventsSubGroupTbls">
+    <Type Name="eventsSubGroupTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="eventsID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="subGroupID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="eventsTbl_eventsSubGroupTbl" Member="eventsTbl" ThisKey="eventsID" OtherKey="ID" Type="eventsTbl" IsForeignKey="true" />
+      <Association Name="SubGroupTbl_eventsSubGroupTbl" Member="SubGroupTbl" ThisKey="subGroupID" OtherKey="ID" Type="SubGroupTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.eventsTbl" Member="eventsTbls">
+    <Type Name="eventsTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isPublished" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="viewCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fromDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="toDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="eventsTbl_eventCommentTbl" Member="eventCommentTbls" ThisKey="ID" OtherKey="eventID" Type="eventCommentTbl" />
+      <Association Name="eventsTbl_eventsContentTbl" Member="eventsContentTbls" ThisKey="ID" OtherKey="eventsID" Type="eventsContentTbl" />
+      <Association Name="eventsTbl_eventsLikeTbl" Member="eventsLikeTbls" ThisKey="ID" OtherKey="eventsID" Type="eventsLikeTbl" />
+      <Association Name="eventsTbl_eventsSubGroupTbl" Member="eventsSubGroupTbls" ThisKey="ID" OtherKey="eventsID" Type="eventsSubGroupTbl" />
+      <Association Name="eventsTbl_eventTagTbl" Member="eventTagTbls" ThisKey="ID" OtherKey="eventID" Type="eventTagTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.eventTagTbl" Member="eventTagTbls">
+    <Type Name="eventTagTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="eventID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tagID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="eventsTbl_eventTagTbl" Member="eventsTbl" ThisKey="eventID" OtherKey="ID" Type="eventsTbl" IsForeignKey="true" />
+      <Association Name="tagTbl_eventTagTbl" Member="tagTbl" ThisKey="tagID" OtherKey="ID" Type="tagTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GroupTbl" Member="GroupTbls">
+    <Type Name="GroupTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(350) NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="GroupTbl_SubGroupTbl" Member="SubGroupTbls" ThisKey="ID" OtherKey="groupID" Type="SubGroupTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.icanCommentTbl" Member="icanCommentTbls">
+    <Type Name="icanCommentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="icanID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="fullName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="mobile" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="text" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="icanTbl_icanCommentTbl" Member="icanTbl" ThisKey="icanID" OtherKey="ID" Type="icanTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.icanContentTbl" Member="icanContentTbls">
+    <Type Name="icanContentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="icanID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="contentType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="pri" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="downloadCount" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="fileType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="fileSize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="icanTbl_icanContentTbl" Member="icanTbl" ThisKey="icanID" OtherKey="ID" Type="icanTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.icanTbl" Member="icanTbls">
+    <Type Name="icanTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="creatorID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isPublished" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="haveAttachment" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="viewCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="icanTbl_icanCommentTbl" Member="icanCommentTbls" ThisKey="ID" OtherKey="icanID" Type="icanCommentTbl" />
+      <Association Name="icanTbl_icanContentTbl" Member="icanContentTbls" ThisKey="ID" OtherKey="icanID" Type="icanContentTbl" />
+      <Association Name="mUserTbl_icanTbl" Member="mUserTbl" ThisKey="creatorID" OtherKey="ID" Type="mUserTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ideasContentTbl" Member="ideasContentTbls">
+    <Type Name="ideasContentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ideasID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="contentType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="pri" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="ideasTbl_ideasContentTbl" Member="ideasTbl" ThisKey="ideasID" OtherKey="ID" Type="ideasTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ideasLikeTbl" Member="ideasLikeTbls">
+    <Type Name="ideasLikeTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ideasID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="isLike" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="ideasTbl_ideasLikeTbl" Member="ideasTbl" ThisKey="ideasID" OtherKey="ID" Type="ideasTbl" IsForeignKey="true" />
+      <Association Name="mUserTbl_ideasLikeTbl" Member="mUserTbl" ThisKey="userID" OtherKey="ID" Type="mUserTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ideasTagTbl" Member="ideasTagTbls">
+    <Type Name="ideasTagTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tagID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ideasID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="ideasTbl_ideasTagTbl" Member="ideasTbl" ThisKey="ideasID" OtherKey="ID" Type="ideasTbl" IsForeignKey="true" />
+      <Association Name="tagTbl_ideasTagTbl" Member="tagTbl" ThisKey="tagID" OtherKey="ID" Type="tagTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ideasTbl" Member="ideasTbls">
+    <Type Name="ideasTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="bestIdeaCompetitionsID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="ideasTbl_ideasContentTbl" Member="ideasContentTbls" ThisKey="ID" OtherKey="ideasID" Type="ideasContentTbl" />
+      <Association Name="ideasTbl_ideasLikeTbl" Member="ideasLikeTbls" ThisKey="ID" OtherKey="ideasID" Type="ideasLikeTbl" />
+      <Association Name="ideasTbl_ideasTagTbl" Member="ideasTagTbls" ThisKey="ID" OtherKey="ideasID" Type="ideasTagTbl" />
+      <Association Name="bestIdeaCompetitionsTbl_ideasTbl" Member="bestIdeaCompetitionsTbl" ThisKey="bestIdeaCompetitionsID" OtherKey="ID" Type="bestIdeaCompetitionsTbl" IsForeignKey="true" />
+      <Association Name="mUserTbl_ideasTbl" Member="mUserTbl" ThisKey="mUserID" OtherKey="ID" Type="mUserTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ioCommentTbl" Member="ioCommentTbls">
+    <Type Name="ioCommentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ioID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="fullName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="mobile" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="text" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="ioTbl_ioCommentTbl" Member="ioTbl" ThisKey="ioID" OtherKey="ID" Type="ioTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ioContentTbl" Member="ioContentTbls">
+    <Type Name="ioContentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ioID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="contentType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="pri" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="ioTbl_ioContentTbl" Member="ioTbl" ThisKey="ioID" OtherKey="ID" Type="ioTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ioLikeTbl" Member="ioLikeTbls">
+    <Type Name="ioLikeTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ioID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="isLike" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="ioTbl_ioLikeTbl" Member="ioTbl" ThisKey="ioID" OtherKey="ID" Type="ioTbl" IsForeignKey="true" />
+      <Association Name="mUserTbl_ioLikeTbl" Member="mUserTbl" ThisKey="userID" OtherKey="ID" Type="mUserTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ioSubGroupTbl" Member="ioSubGroupTbls">
+    <Type Name="ioSubGroupTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ioID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="subGroupID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="ioTbl_ioSubGroupTbl" Member="ioTbl" ThisKey="ioID" OtherKey="ID" Type="ioTbl" IsForeignKey="true" />
+      <Association Name="SubGroupTbl_ioSubGroupTbl" Member="SubGroupTbl" ThisKey="subGroupID" OtherKey="ID" Type="SubGroupTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ioTagTbl" Member="ioTagTbls">
+    <Type Name="ioTagTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tagID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ioID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="ioTbl_ioTagTbl" Member="ioTbl" ThisKey="ioID" OtherKey="ID" Type="ioTbl" IsForeignKey="true" />
+      <Association Name="tagTbl_ioTagTbl" Member="tagTbl" ThisKey="tagID" OtherKey="ID" Type="tagTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ioTbl" Member="ioTbls">
+    <Type Name="ioTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isPublished" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="viewCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="publishDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="ioTbl_ioCommentTbl" Member="ioCommentTbls" ThisKey="ID" OtherKey="ioID" Type="ioCommentTbl" />
+      <Association Name="ioTbl_ioContentTbl" Member="ioContentTbls" ThisKey="ID" OtherKey="ioID" Type="ioContentTbl" />
+      <Association Name="ioTbl_ioLikeTbl" Member="ioLikeTbls" ThisKey="ID" OtherKey="ioID" Type="ioLikeTbl" />
+      <Association Name="ioTbl_ioSubGroupTbl" Member="ioSubGroupTbls" ThisKey="ID" OtherKey="ioID" Type="ioSubGroupTbl" />
+      <Association Name="ioTbl_ioTagTbl" Member="ioTagTbls" ThisKey="ID" OtherKey="ioID" Type="ioTagTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ipTbl" Member="ipTbls">
+    <Type Name="ipTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ip" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.masterReportContentTbl" Member="masterReportContentTbls">
+    <Type Name="masterReportContentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="masterReportID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Association Name="masterReportTbl_masterReportContentTbl" Member="masterReportTbl" ThisKey="masterReportID" OtherKey="ID" Type="masterReportTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.masterReportTagTbl" Member="masterReportTagTbls">
+    <Type Name="masterReportTagTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tagID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="masterReportID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="masterReportTbl_masterReportTagTbl" Member="masterReportTbl" ThisKey="masterReportID" OtherKey="ID" Type="masterReportTbl" IsForeignKey="true" />
+      <Association Name="tagTbl_masterReportTagTbl" Member="tagTbl" ThisKey="tagID" OtherKey="ID" Type="tagTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.masterReportTbl" Member="masterReportTbls">
+    <Type Name="masterReportTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="viewCount" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="publishDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="masterReportTbl_masterReportContentTbl" Member="masterReportContentTbls" ThisKey="ID" OtherKey="masterReportID" Type="masterReportContentTbl" />
+      <Association Name="masterReportTbl_masterReportTagTbl" Member="masterReportTagTbls" ThisKey="ID" OtherKey="masterReportID" Type="masterReportTagTbl" />
+      <Association Name="masterReportTbl_masterRreportSubGroupTbl" Member="masterRreportSubGroupTbls" ThisKey="ID" OtherKey="reportID" Type="masterRreportSubGroupTbl" />
+      <Association Name="masterReportTbl_reportCommentTbl" Member="reportCommentTbls" ThisKey="ID" OtherKey="reportID" Type="reportCommentTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.masterRreportSubGroupTbl" Member="masterRreportSubGroupTbls">
+    <Type Name="masterRreportSubGroupTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="reportID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="subGroupID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="masterReportTbl_masterRreportSubGroupTbl" Member="masterReportTbl" ThisKey="reportID" OtherKey="ID" Type="masterReportTbl" IsForeignKey="true" />
+      <Association Name="SubGroupTbl_masterRreportSubGroupTbl" Member="SubGroupTbl" ThisKey="subGroupID" OtherKey="ID" Type="SubGroupTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.messageRecieverTbl" Member="messageRecieverTbls">
+    <Type Name="messageRecieverTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="recieverID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="messageID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="messageTbl_messageRecieverTbl" Member="messageTbl" ThisKey="messageID" OtherKey="ID" Type="messageTbl" IsForeignKey="true" />
+      <Association Name="mUserTbl_messageRecieverTbl" Member="mUserTbl" ThisKey="recieverID" OtherKey="ID" Type="mUserTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.messageSubGroupTbl" Member="messageSubGroupTbls">
+    <Type Name="messageSubGroupTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="messageID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="subGroupID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="messageTbl_messageSubGroupTbl" Member="messageTbl" ThisKey="messageID" OtherKey="ID" Type="messageTbl" IsForeignKey="true" />
+      <Association Name="SubGroupTbl_messageSubGroupTbl" Member="SubGroupTbl" ThisKey="subGroupID" OtherKey="ID" Type="SubGroupTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.messageTbl" Member="messageTbls">
+    <Type Name="messageTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="text" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="attachment" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="toPartner" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="toAll" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="downloadCount" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="fileType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="fileSize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="messageTbl_messageRecieverTbl" Member="messageRecieverTbls" ThisKey="ID" OtherKey="messageID" Type="messageRecieverTbl" />
+      <Association Name="messageTbl_messageSubGroupTbl" Member="messageSubGroupTbls" ThisKey="ID" OtherKey="messageID" Type="messageSubGroupTbl" />
+      <Association Name="mUserTbl_messageTbl" Member="mUserTbl" ThisKey="mUserID" OtherKey="ID" Type="mUserTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mUserOptionTbl" Member="mUserOptionTbls">
+    <Type Name="mUserOptionTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="optionID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mUserTbl_mUserOptionTbl" Member="mUserTbl" ThisKey="mUserID" OtherKey="ID" Type="mUserTbl" IsForeignKey="true" />
+      <Association Name="optionTbl_mUserOptionTbl" Member="optionTbl" ThisKey="optionID" OtherKey="ID" Type="optionTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mUserTbl" Member="mUserTbls">
+    <Type Name="mUserTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="accessID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="family" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="emailtell" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="lastedit" Type="System.String" DbType="NVarChar(550) NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mUserTbl_answerTbl" Member="answerTbls" ThisKey="ID" OtherKey="mUserID" Type="answerTbl" />
+      <Association Name="mUserTbl_downloadLikeTbl" Member="downloadLikeTbls" ThisKey="ID" OtherKey="userID" Type="downloadLikeTbl" />
+      <Association Name="mUserTbl_eventsLikeTbl" Member="eventsLikeTbls" ThisKey="ID" OtherKey="userID" Type="eventsLikeTbl" />
+      <Association Name="mUserTbl_icanTbl" Member="icanTbls" ThisKey="ID" OtherKey="creatorID" Type="icanTbl" />
+      <Association Name="mUserTbl_ideasLikeTbl" Member="ideasLikeTbls" ThisKey="ID" OtherKey="userID" Type="ideasLikeTbl" />
+      <Association Name="mUserTbl_ideasTbl" Member="ideasTbls" ThisKey="ID" OtherKey="mUserID" Type="ideasTbl" />
+      <Association Name="mUserTbl_ioLikeTbl" Member="ioLikeTbls" ThisKey="ID" OtherKey="userID" Type="ioLikeTbl" />
+      <Association Name="mUserTbl_messageRecieverTbl" Member="messageRecieverTbls" ThisKey="ID" OtherKey="recieverID" Type="messageRecieverTbl" />
+      <Association Name="mUserTbl_messageTbl" Member="messageTbls" ThisKey="ID" OtherKey="mUserID" Type="messageTbl" />
+      <Association Name="mUserTbl_mUserOptionTbl" Member="mUserOptionTbls" ThisKey="ID" OtherKey="mUserID" Type="mUserOptionTbl" />
+      <Association Name="mUserTbl_newsLikeTbl" Member="newsLikeTbls" ThisKey="ID" OtherKey="userID" Type="newsLikeTbl" />
+      <Association Name="mUserTbl_publicationLikeTbl" Member="publicationLikeTbls" ThisKey="ID" OtherKey="userID" Type="publicationLikeTbl" />
+      <Association Name="mUserTbl_responseTbl" Member="responseTbls" ThisKey="ID" OtherKey="mUserID" Type="responseTbl" />
+      <Association Name="mUserTbl_userSubGroupTbl" Member="userSubGroupTbls" ThisKey="ID" OtherKey="userID" Type="userSubGroupTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.myIranContentTbl" Member="myIranContentTbls">
+    <Type Name="myIranContentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="myIranID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="contentType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="pri" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="myIranTbl_myIranContentTbl" Member="myIranTbl" ThisKey="myIranID" OtherKey="ID" Type="myIranTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.myIranTagTbl" Member="myIranTagTbls">
+    <Type Name="myIranTagTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tagID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="myIranID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="myIranTbl_myIranTagTbl" Member="myIranTbl" ThisKey="myIranID" OtherKey="ID" Type="myIranTbl" IsForeignKey="true" />
+      <Association Name="tagTbl_myIranTagTbl" Member="tagTbl" ThisKey="tagID" OtherKey="ID" Type="tagTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.myIranTbl" Member="myIranTbls">
+    <Type Name="myIranTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="startDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="endDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="isDone" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="isSendNotification" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="notificationText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="doneDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="myIranTbl_myIranContentTbl" Member="myIranContentTbls" ThisKey="ID" OtherKey="myIranID" Type="myIranContentTbl" />
+      <Association Name="myIranTbl_myIranTagTbl" Member="myIranTagTbls" ThisKey="ID" OtherKey="myIranID" Type="myIranTagTbl" />
+      <Association Name="myIranTbl_responseTbl" Member="responseTbls" ThisKey="ID" OtherKey="myIranID" Type="responseTbl" />
+      <Association Name="userTbl_myIranTbl" Member="userTbl" ThisKey="userID" OtherKey="ID" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.newsCommentTbl" Member="newsCommentTbls">
+    <Type Name="newsCommentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="newsID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="fullName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="mobile" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="text" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="newsTbl_newsCommentTbl" Member="newsTbl" ThisKey="newsID" OtherKey="ID" Type="newsTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.newsContentTbl" Member="newsContentTbls">
+    <Type Name="newsContentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="newsID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="contentType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="pri" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="newsTbl_newsContentTbl" Member="newsTbl" ThisKey="newsID" OtherKey="ID" Type="newsTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.newsLikeTbl" Member="newsLikeTbls">
+    <Type Name="newsLikeTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="newsID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="isLike" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mUserTbl_newsLikeTbl" Member="mUserTbl" ThisKey="userID" OtherKey="ID" Type="mUserTbl" IsForeignKey="true" />
+      <Association Name="newsTbl_newsLikeTbl" Member="newsTbl" ThisKey="newsID" OtherKey="ID" Type="newsTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.newsSubGroupTbl" Member="newsSubGroupTbls">
+    <Type Name="newsSubGroupTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="newsID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="subGroupID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="newsTbl_newsSubGroupTbl" Member="newsTbl" ThisKey="newsID" OtherKey="ID" Type="newsTbl" IsForeignKey="true" />
+      <Association Name="SubGroupTbl_newsSubGroupTbl" Member="SubGroupTbl" ThisKey="subGroupID" OtherKey="ID" Type="SubGroupTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.newsTagTbl" Member="newsTagTbls">
+    <Type Name="newsTagTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tagID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="newsID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="newsTbl_newsTagTbl" Member="newsTbl" ThisKey="newsID" OtherKey="ID" Type="newsTbl" IsForeignKey="true" />
+      <Association Name="tagTbl_newsTagTbl" Member="tagTbl" ThisKey="tagID" OtherKey="ID" Type="tagTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.newsTbl" Member="newsTbls">
+    <Type Name="newsTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isPublished" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="viewCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="publishDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="newsTbl_newsCommentTbl" Member="newsCommentTbls" ThisKey="ID" OtherKey="newsID" Type="newsCommentTbl" />
+      <Association Name="newsTbl_newsContentTbl" Member="newsContentTbls" ThisKey="ID" OtherKey="newsID" Type="newsContentTbl" />
+      <Association Name="newsTbl_newsLikeTbl" Member="newsLikeTbls" ThisKey="ID" OtherKey="newsID" Type="newsLikeTbl" />
+      <Association Name="newsTbl_newsSubGroupTbl" Member="newsSubGroupTbls" ThisKey="ID" OtherKey="newsID" Type="newsSubGroupTbl" />
+      <Association Name="newsTbl_newsTagTbl" Member="newsTagTbls" ThisKey="ID" OtherKey="newsID" Type="newsTagTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.optionTbl" Member="optionTbls">
+    <Type Name="optionTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pollID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="text" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="optionTbl_mUserOptionTbl" Member="mUserOptionTbls" ThisKey="ID" OtherKey="optionID" Type="mUserOptionTbl" />
+      <Association Name="pollTbl_optionTbl" Member="pollTbl" ThisKey="pollID" OtherKey="ID" Type="pollTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.packetUploadServiceTbl" Member="packetUploadServiceTbls">
+    <Type Name="packetUploadServiceTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="token" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.partnersTbl" Member="partnersTbls">
+    <Type Name="partnersTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="family" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="innerTell" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="[level]" Member="level" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="registrationmobile" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="optionalmobile" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pollContentTbl" Member="pollContentTbls">
+    <Type Name="pollContentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pollID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="contentType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="pri" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="pollTbl_pollContentTbl" Member="pollTbl" ThisKey="pollID" OtherKey="ID" Type="pollTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pollSubGroupTbl" Member="pollSubGroupTbls">
+    <Type Name="pollSubGroupTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pollID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="subGroupID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="pollTbl_pollSubGroupTbl" Member="pollTbl" ThisKey="pollID" OtherKey="ID" Type="pollTbl" IsForeignKey="true" />
+      <Association Name="SubGroupTbl_pollSubGroupTbl" Member="SubGroupTbl" ThisKey="subGroupID" OtherKey="ID" Type="SubGroupTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pollTagTbl" Member="pollTagTbls">
+    <Type Name="pollTagTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tagID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="pollID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="pollTbl_pollTagTbl" Member="pollTbl" ThisKey="pollID" OtherKey="ID" Type="pollTbl" IsForeignKey="true" />
+      <Association Name="tagTbl_pollTagTbl" Member="tagTbl" ThisKey="tagID" OtherKey="ID" Type="tagTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pollTbl" Member="pollTbls">
+    <Type Name="pollTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="viewCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="isFinished" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="finishedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="startDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="pollTbl_optionTbl" Member="optionTbls" ThisKey="ID" OtherKey="pollID" Type="optionTbl" />
+      <Association Name="pollTbl_pollContentTbl" Member="pollContentTbls" ThisKey="ID" OtherKey="pollID" Type="pollContentTbl" />
+      <Association Name="pollTbl_pollSubGroupTbl" Member="pollSubGroupTbls" ThisKey="ID" OtherKey="pollID" Type="pollSubGroupTbl" />
+      <Association Name="pollTbl_pollTagTbl" Member="pollTagTbls" ThisKey="ID" OtherKey="pollID" Type="pollTagTbl" />
+      <Association Name="userTbl_pollTbl" Member="userTbl" ThisKey="userID" OtherKey="ID" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.publicationCommentTbl" Member="publicationCommentTbls">
+    <Type Name="publicationCommentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="publicationID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="fullName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="mobile" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="text" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="publicationTbl_publicationCommentTbl" Member="publicationTbl" ThisKey="publicationID" OtherKey="ID" Type="publicationTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.publicationContentTbl" Member="publicationContentTbls">
+    <Type Name="publicationContentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="publicationsID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="contentType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="pri" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="publicationTbl_publicationContentTbl" Member="publicationTbl" ThisKey="publicationsID" OtherKey="ID" Type="publicationTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.publicationLikeTbl" Member="publicationLikeTbls">
+    <Type Name="publicationLikeTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="publicationsID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="isLike" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mUserTbl_publicationLikeTbl" Member="mUserTbl" ThisKey="userID" OtherKey="ID" Type="mUserTbl" IsForeignKey="true" />
+      <Association Name="publicationTbl_publicationLikeTbl" Member="publicationTbl" ThisKey="publicationsID" OtherKey="ID" Type="publicationTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.publicationSubGroupTbl" Member="publicationSubGroupTbls">
+    <Type Name="publicationSubGroupTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="publicationsID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="subGroupID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="publicationTbl_publicationSubGroupTbl" Member="publicationTbl" ThisKey="publicationsID" OtherKey="ID" Type="publicationTbl" IsForeignKey="true" />
+      <Association Name="SubGroupTbl_publicationSubGroupTbl" Member="SubGroupTbl" ThisKey="subGroupID" OtherKey="ID" Type="SubGroupTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.publicationTagTbl" Member="publicationTagTbls">
+    <Type Name="publicationTagTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="publicationID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tagID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="publicationTbl_publicationTagTbl" Member="publicationTbl" ThisKey="publicationID" OtherKey="ID" Type="publicationTbl" IsForeignKey="true" />
+      <Association Name="tagTbl_publicationTagTbl" Member="tagTbl" ThisKey="tagID" OtherKey="ID" Type="tagTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.publicationTbl" Member="publicationTbls">
+    <Type Name="publicationTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isPublished" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="viewCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="publishDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="publicationTbl_publicationCommentTbl" Member="publicationCommentTbls" ThisKey="ID" OtherKey="publicationID" Type="publicationCommentTbl" />
+      <Association Name="publicationTbl_publicationContentTbl" Member="publicationContentTbls" ThisKey="ID" OtherKey="publicationsID" Type="publicationContentTbl" />
+      <Association Name="publicationTbl_publicationLikeTbl" Member="publicationLikeTbls" ThisKey="ID" OtherKey="publicationsID" Type="publicationLikeTbl" />
+      <Association Name="publicationTbl_publicationSubGroupTbl" Member="publicationSubGroupTbls" ThisKey="ID" OtherKey="publicationsID" Type="publicationSubGroupTbl" />
+      <Association Name="publicationTbl_publicationTagTbl" Member="publicationTagTbls" ThisKey="ID" OtherKey="publicationID" Type="publicationTagTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pushMessageSubGroupTbl" Member="pushMessageSubGroupTbls">
+    <Type Name="pushMessageSubGroupTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pushMessageID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="subGroupID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="pushMessageTbl_pushMessageSubGroupTbl" Member="pushMessageTbl" ThisKey="pushMessageID" OtherKey="ID" Type="pushMessageTbl" IsForeignKey="true" />
+      <Association Name="SubGroupTbl_pushMessageSubGroupTbl" Member="SubGroupTbl" ThisKey="subGroupID" OtherKey="ID" Type="SubGroupTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pushMessageTbl" Member="pushMessageTbls">
+    <Type Name="pushMessageTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="creatorID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="text" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="toPartner" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="toAll" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="pushMessageTbl_pushMessageSubGroupTbl" Member="pushMessageSubGroupTbls" ThisKey="ID" OtherKey="pushMessageID" Type="pushMessageSubGroupTbl" />
+      <Association Name="userTbl_pushMessageTbl" Member="userTbl" ThisKey="creatorID" OtherKey="ID" Type="userTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pushUserTbl" Member="pushUserTbls">
+    <Type Name="pushUserTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mUsreID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="token" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="deviceID" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="latitude" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="longitude" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="lastUpdateDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="openedCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.reportCommentTbl" Member="reportCommentTbls">
+    <Type Name="reportCommentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="reportID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="fullName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="mobile" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="text" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="masterReportTbl_reportCommentTbl" Member="masterReportTbl" ThisKey="reportID" OtherKey="ID" Type="masterReportTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.reportTbl" Member="reportTbls">
+    <Type Name="reportTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="xTitle" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="yTitle" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="charttypes" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="reportTbl_chartTbl" Member="chartTbls" ThisKey="ID" OtherKey="reportID" Type="chartTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.responseContentTbl" Member="responseContentTbls">
+    <Type Name="responseContentTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="responseID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="contentType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="pri" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="responseTbl_responseContentTbl" Member="responseTbl" ThisKey="responseID" OtherKey="ID" Type="responseTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.responseTbl" Member="responseTbls">
+    <Type Name="responseTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mUserID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="myIranID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="isCorrect" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="isWinner" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="responseTbl_responseContentTbl" Member="responseContentTbls" ThisKey="ID" OtherKey="responseID" Type="responseContentTbl" />
+      <Association Name="mUserTbl_responseTbl" Member="mUserTbl" ThisKey="mUserID" OtherKey="ID" Type="mUserTbl" IsForeignKey="true" />
+      <Association Name="myIranTbl_responseTbl" Member="myIranTbl" ThisKey="myIranID" OtherKey="ID" Type="myIranTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.settingTbl" Member="settingTbls">
+    <Type Name="settingTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.subGroupPushTbl" Member="subGroupPushTbls">
+    <Type Name="subGroupPushTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="subGroupID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="toSubGroupID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="SubGroupTbl_subGroupPushTbl" Member="SubGroupTbl" ThisKey="subGroupID" OtherKey="ID" Type="SubGroupTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SubGroupTbl" Member="SubGroupTbls">
+    <Type Name="SubGroupTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="groupID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(350) NOT NULL" CanBeNull="false" />
+      <Column Name="isBlock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="canPush" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="toAll" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="toPartner" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="SubGroupTbl_downloadSubGroupTbl" Member="downloadSubGroupTbls" ThisKey="ID" OtherKey="subGroupID" Type="downloadSubGroupTbl" />
+      <Association Name="SubGroupTbl_eventsSubGroupTbl" Member="eventsSubGroupTbls" ThisKey="ID" OtherKey="subGroupID" Type="eventsSubGroupTbl" />
+      <Association Name="SubGroupTbl_ioSubGroupTbl" Member="ioSubGroupTbls" ThisKey="ID" OtherKey="subGroupID" Type="ioSubGroupTbl" />
+      <Association Name="SubGroupTbl_masterRreportSubGroupTbl" Member="masterRreportSubGroupTbls" ThisKey="ID" OtherKey="subGroupID" Type="masterRreportSubGroupTbl" />
+      <Association Name="SubGroupTbl_messageSubGroupTbl" Member="messageSubGroupTbls" ThisKey="ID" OtherKey="subGroupID" Type="messageSubGroupTbl" />
+      <Association Name="SubGroupTbl_newsSubGroupTbl" Member="newsSubGroupTbls" ThisKey="ID" OtherKey="subGroupID" Type="newsSubGroupTbl" />
+      <Association Name="SubGroupTbl_pollSubGroupTbl" Member="pollSubGroupTbls" ThisKey="ID" OtherKey="subGroupID" Type="pollSubGroupTbl" />
+      <Association Name="SubGroupTbl_publicationSubGroupTbl" Member="publicationSubGroupTbls" ThisKey="ID" OtherKey="subGroupID" Type="publicationSubGroupTbl" />
+      <Association Name="SubGroupTbl_pushMessageSubGroupTbl" Member="pushMessageSubGroupTbls" ThisKey="ID" OtherKey="subGroupID" Type="pushMessageSubGroupTbl" />
+      <Association Name="SubGroupTbl_subGroupPushTbl" Member="subGroupPushTbls" ThisKey="ID" OtherKey="subGroupID" Type="subGroupPushTbl" />
+      <Association Name="SubGroupTbl_userSubGroupTbl" Member="userSubGroupTbls" ThisKey="ID" OtherKey="subGroupID" Type="userSubGroupTbl" />
+      <Association Name="GroupTbl_SubGroupTbl" Member="GroupTbl" ThisKey="groupID" OtherKey="ID" Type="GroupTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tagTbl" Member="tagTbls">
+    <Type Name="tagTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tagTbl_bestIdeaCompetitionsTagTbl" Member="bestIdeaCompetitionsTagTbls" ThisKey="ID" OtherKey="tagID" Type="bestIdeaCompetitionsTagTbl" />
+      <Association Name="tagTbl_creativityCompetitionTagTbl" Member="creativityCompetitionTagTbls" ThisKey="ID" OtherKey="tagID" Type="creativityCompetitionTagTbl" />
+      <Association Name="tagTbl_downloadTagTbl" Member="downloadTagTbls" ThisKey="ID" OtherKey="tagID" Type="downloadTagTbl" />
+      <Association Name="tagTbl_eventTagTbl" Member="eventTagTbls" ThisKey="ID" OtherKey="tagID" Type="eventTagTbl" />
+      <Association Name="tagTbl_ideasTagTbl" Member="ideasTagTbls" ThisKey="ID" OtherKey="tagID" Type="ideasTagTbl" />
+      <Association Name="tagTbl_ioTagTbl" Member="ioTagTbls" ThisKey="ID" OtherKey="tagID" Type="ioTagTbl" />
+      <Association Name="tagTbl_masterReportTagTbl" Member="masterReportTagTbls" ThisKey="ID" OtherKey="tagID" Type="masterReportTagTbl" />
+      <Association Name="tagTbl_myIranTagTbl" Member="myIranTagTbls" ThisKey="ID" OtherKey="tagID" Type="myIranTagTbl" />
+      <Association Name="tagTbl_newsTagTbl" Member="newsTagTbls" ThisKey="ID" OtherKey="tagID" Type="newsTagTbl" />
+      <Association Name="tagTbl_pollTagTbl" Member="pollTagTbls" ThisKey="ID" OtherKey="tagID" Type="pollTagTbl" />
+      <Association Name="tagTbl_publicationTagTbl" Member="publicationTagTbls" ThisKey="ID" OtherKey="tagID" Type="publicationTagTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.temporaryRegistrationTbl" Member="temporaryRegistrationTbls">
+    <Type Name="temporaryRegistrationTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="emailMobile" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tokenUploadServiceTbl" Member="tokenUploadServiceTbls">
+    <Type Name="tokenUploadServiceTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="token" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="packetCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="receivedPacket" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="format" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[upDate]" Member="upDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.userSubGroupTbl" Member="userSubGroupTbls">
+    <Type Name="userSubGroupTbl">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="subGroupID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="mUserTbl_userSubGroupTbl" Member="mUserTbl" ThisKey="userID" OtherKey="ID" Type="mUserTbl" IsForeignKey="true" />
+      <Association Name="SubGroupTbl_userSubGroupTbl" Member="SubGroupTbl" ThisKey="subGroupID" OtherKey="ID" Type="SubGroupTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

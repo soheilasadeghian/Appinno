@@ -1,0 +1,240 @@
+﻿@charset "utf-8";
+
+@font-face {
+    font-family: 'BYekan';
+    src: url('../../component/font/BYekan.eot') format('eot'), /* IE6–8 */
+    url('../../component/font/BYekan.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../../component/font/BYekan.ttf') format('truetype'); /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+::selection {
+    background: #71d114;
+    color: #fff;
+}
+/* mozilla firefox */
+::-moz-selection {
+    background: #71d114;
+    color: #fff;
+}
+
+* {
+    outline: none;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    border-style: none;
+    border-color: inherit;
+    border-width: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: middle;
+    background: transparent;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+body {
+    line-height: 1;
+    direction: rtl;
+    background-color: #fff !important; /*#e1e1e1;*/
+    font-family: BYekan !important;
+    background-image: url('../images/bg.png');
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #eeeeee;
+}
+
+.clear {
+    clear: both;
+}
+
+.vertical_max {
+    clear: both;
+    height: 30px;
+}
+
+.vertical_min {
+    clear: both;
+    height: 12px;
+}
+
+.vertical_small {
+    clear: both;
+    height: 5px;
+}
+
+.color1 {
+    background-color: #009600 !important;
+}
+
+.color2 {
+    background-color: #a300aa !important;
+}
+
+.color3 {
+    background-color: #b51c44 !important;
+}
+
+.color4 {
+    background-color: #e88a05 !important;
+}
+
+.color5 {
+    background-color: #ce4b27 !important;
+}
+
+.color6 {
+    background-color: #5b3ab6 !important;
+}
+
+.color7 {
+    background-color: #0093a8 !important;
+}
+
+.color8 {
+    background-color: #3498db !important;
+}
+
+.red {
+    color: #ff0000 !important;
+}
+
+.mci-1c {
+    color: #54c5d0 !important;
+}
+
+.mci-1-1c {
+    color: #34858d !important;
+}
+
+.mci-1-2c {
+    color: #1b494e !important;
+}
+
+.mci-2c {
+    color: #faa61a !important;
+}
+
+.mci-2-1c {
+    color: #bb7b0f !important;
+}
+
+.mci-2-2c {
+    color: #81550a !important;
+}
+
+
+.mci-1b {
+    background-color: #21b5d3 !important;
+}
+
+.mci-1-1b {
+    background-color: #34858d !important;
+}
+
+.mci-1-2b {
+    background-color: #1b494e !important;
+}
+
+.mci-2b {
+    background-color: #75c6db !important;
+}
+
+.mci-2-1b {
+    background-color: #bb7b0f !important;
+}
+
+.mci-2-2b {
+    background-color: #81550a !important;
+}
+
+.white {
+    color: White !important;
+}
+
+.footer {
+}
+
+input[type=text], [type=password] {
+    padding: 0px 5px 0px 5px;
+    height: 40px;
+    background-color: white;
+    font-size: 0.9em;
+    font-family: BYekan;
+    outline: none;
+}
+
+::-moz-placeholder {
+    color: #f00;
+}
+/* firefox 19+ */
+:-ms-input-placeholder {
+    color: #f00;
+}
+/* ie */
+input:-moz-placeholder {
+    color: #f00;
+}
+
+
+
+input[type=text]:focus, input[type=password]:focus {
+    border: 1px solid #04536d;
+}
+
+.gbutton {
+    border: none;
+    font-size: 0.8em;
+    font-family: BYekan;
+}
+
+.ok {
+    background-position: 5px center;
+    background-color: #03b303;
+    width: 100%;
+    height: auto;
+    direction: rtl;
+    background-image: url('../images/ok.png');
+    background-repeat: no-repeat;
+    display: none;
+}
+
+.error {
+    background-position: 5px center;
+    background-color: #ee5a31;
+    width: 100%;
+    height: auto;
+    direction: rtl;
+    background-image: url('../images/Error.png');
+    background-repeat: no-repeat;
+    display: none;
+}
+
+    .error span, .ok span {
+        font-size: 0.8em;
+        display: block;
+        padding: 5px;
+        color: #fff;
+    }
+
+.shadow {
+    -moz-box-shadow: -2px 3px 5px rgba(68,68,68,0.6);
+    -webkit-box-shadow: -2px 3px 5px rgba(68,68,68,0.6);
+    box-shadow: -2px 3px 5px rgba(68,68,68,0.6);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+    zoom: 1;
+}

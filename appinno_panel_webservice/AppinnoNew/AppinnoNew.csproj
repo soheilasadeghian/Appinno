@@ -1,0 +1,1236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6AB952B0-B5C3-4793-A189-7997F823091F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppinnoNew</RootNamespace>
+    <AssemblyName>AppinnoNew</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.1.0\lib\net40\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Persia, Version=3.0.4052.38236, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Persia.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\component\images\unblock.png" />
+    <Content Include="admin\epoll.aspx" />
+    <Content Include="admin\eresponse.aspx" />
+    <Content Include="admin\pages\epoll\ajax.js" />
+    <Content Include="admin\pages\epoll\css.css" />
+    <Content Include="admin\pages\epoll\js.js" />
+    <Content Include="admin\pages\eresponse\ajax.js" />
+    <Content Include="admin\pages\eresponse\css.css" />
+    <Content Include="admin\pages\eresponse\js.js" />
+    <Content Include="admin\pages\message\ajax.js" />
+    <Content Include="admin\pages\message\css.css" />
+    <Content Include="admin\pages\message\js.js" />
+    <Content Include="admin\pages\poll\ajax.js" />
+    <Content Include="admin\pages\poll\css.css" />
+    <Content Include="admin\pages\poll\js.js" />
+    <Content Include="admin\pages\responselist\ajax.js" />
+    <Content Include="admin\pages\responselist\css.css" />
+    <Content Include="admin\pages\responselist\js.js" />
+    <Content Include="admin\message.aspx" />
+    <Content Include="admin\pages\setting\ajax.js" />
+    <Content Include="admin\pages\setting\css.css" />
+    <Content Include="admin\pages\setting\js.js" />
+    <Content Include="admin\poll.aspx" />
+    <Content Include="admin\responselist.aspx" />
+    <Content Include="admin\answerlist.aspx" />
+    <Content Include="admin\emyIran.aspx" />
+    <Content Include="admin\myIran.aspx" />
+    <Content Include="admin\creativityCompetition.aspx" />
+    <Content Include="admin\bestIdeasCompetition.aspx" />
+    <Content Include="admin\bestIdeasCompetitionlist.aspx" />
+    <Content Include="admin\cio.aspx" />
+    <Content Include="admin\cdownload.aspx" />
+    <Content Include="admin\cevent.aspx" />
+    <Content Include="admin\cican.aspx" />
+    <Content Include="admin\component\images\fileic.png" />
+    <Content Include="admin\component\images\ican.png" />
+    <Content Include="admin\component\images\mosabeghe.png" />
+    <Content Include="admin\component\images\poem.png" />
+    <Content Include="admin\creativityCompetitionlist.aspx" />
+    <Content Include="admin\creport.aspx" />
+    <Content Include="admin\cpublication.aspx" />
+    <Content Include="admin\component\images\android.png" />
+    <Content Include="admin\component\images\apple.png" />
+    <Content Include="admin\component\images\approve.png" />
+    <Content Include="admin\component\images\att.png" />
+    <Content Include="admin\component\images\attach_file.png" />
+    <Content Include="admin\component\images\bchart.png" />
+    <Content Include="admin\component\images\bfile.png" />
+    <Content Include="admin\component\images\block.png" />
+    <Content Include="admin\component\images\browse.png" />
+    <Content Include="admin\component\images\chartn.png" />
+    <Content Include="admin\component\images\download.png" />
+    <Content Include="admin\component\images\event.png" />
+    <Content Include="admin\component\images\imageic.png" />
+    <Content Include="admin\component\images\info.png" />
+    <Content Include="admin\component\images\io.png" />
+    <Content Include="admin\component\images\link.png" />
+    <Content Include="admin\component\images\mci_logo.png" />
+    <Content Include="admin\component\images\movie.png" />
+    <Content Include="admin\component\images\news.png" />
+    <Content Include="admin\component\images\pub.png" />
+    <Content Include="admin\component\images\tag.png" />
+    <Content Include="admin\component\images\text.png" />
+    <Content Include="admin\component\images\upload.png" />
+    <Content Include="admin\component\images\videoic.png" />
+    <Content Include="admin\ebestIdeasCompetition.aspx" />
+    <Content Include="admin\ecreativityCompetition.aspx" />
+    <Content Include="admin\eanswer.aspx" />
+    <Content Include="admin\eidea.aspx" />
+    <Content Include="admin\eio.aspx" />
+    <Content Include="admin\eevents.aspx" />
+    <Content Include="admin\edownload.aspx" />
+    <Content Include="admin\eican.aspx" />
+    <Content Include="admin\ereport.aspx" />
+    <Content Include="admin\epublication.aspx" />
+    <Content Include="admin\enews.aspx" />
+    <Content Include="admin\idealist.aspx" />
+    <Content Include="admin\io.aspx" />
+    <Content Include="admin\iolist.aspx" />
+    <Content Include="admin\events.aspx" />
+    <Content Include="admin\eventslist.aspx" />
+    <Content Include="admin\download.aspx" />
+    <Content Include="admin\downloadlist.aspx" />
+    <Content Include="admin\ican.aspx" />
+    <Content Include="admin\icanlist.aspx" />
+    <Content Include="admin\master.Master" />
+    <Content Include="admin\myIranlist.aspx" />
+    <Content Include="admin\pages\answerlist\ajax.js" />
+    <Content Include="admin\pages\answerlist\css.css" />
+    <Content Include="admin\pages\answerlist\js.js" />
+    <Content Include="admin\pages\emyIran\ajax.js" />
+    <Content Include="admin\pages\emyIran\css.css" />
+    <Content Include="admin\pages\emyIran\js.js" />
+    <Content Include="admin\pages\myIran\ajax.js" />
+    <Content Include="admin\pages\myIran\css.css" />
+    <Content Include="admin\pages\myIran\js.js" />
+    <Content Include="admin\pages\creativityCompetition\ajax.js" />
+    <Content Include="admin\pages\creativityCompetition\css.css" />
+    <Content Include="admin\pages\creativityCompetition\js.js" />
+    <Content Include="admin\pages\cio\ajax.js" />
+    <Content Include="admin\pages\cio\css.css" />
+    <Content Include="admin\pages\cio\js.js" />
+    <Content Include="admin\pages\cdownload\ajax.js" />
+    <Content Include="admin\pages\cdownload\css.css" />
+    <Content Include="admin\pages\cdownload\js.js" />
+    <Content Include="admin\pages\cevent\ajax.js" />
+    <Content Include="admin\pages\cevent\css.css" />
+    <Content Include="admin\pages\cevent\js.js" />
+    <Content Include="admin\pages\cican\ajax.js" />
+    <Content Include="admin\pages\cican\css.css" />
+    <Content Include="admin\pages\cican\js.js" />
+    <Content Include="admin\pages\creativityCompetitionlist\ajax.js" />
+    <Content Include="admin\pages\creativityCompetitionlist\css.css" />
+    <Content Include="admin\pages\creativityCompetitionlist\js.js" />
+    <Content Include="admin\pages\creport\ajax.js" />
+    <Content Include="admin\pages\creport\css.css" />
+    <Content Include="admin\pages\creport\js.js" />
+    <Content Include="admin\pages\cpublication\ajax.js" />
+    <Content Include="admin\pages\cpublication\css.css" />
+    <Content Include="admin\pages\cpublication\js.js" />
+    <Content Include="admin\pages\dashboard\ajax.js" />
+    <Content Include="admin\pages\dashboard\css.css" />
+    <Content Include="admin\pages\dashboard\js.js" />
+    <Content Include="admin\pages\ecreativityCompetition\ajax.js" />
+    <Content Include="admin\pages\ecreativityCompetition\css.css" />
+    <Content Include="admin\pages\ecreativityCompetition\js.js" />
+    <Content Include="admin\pages\eican\ajax.js" />
+    <Content Include="admin\pages\eican\css.css" />
+    <Content Include="admin\pages\eican\js.js" />
+    <Content Include="admin\pages\ebestIdeasCompetition\ajax.js" />
+    <Content Include="admin\pages\ebestIdeasCompetition\css.css" />
+    <Content Include="admin\pages\ebestIdeasCompetition\js.js" />
+    <Content Include="admin\pages\eanswer\ajax.js" />
+    <Content Include="admin\pages\eanswer\css.css" />
+    <Content Include="admin\pages\eanswer\js.js" />
+    <Content Include="admin\pages\eidea\ajax.js" />
+    <Content Include="admin\pages\eidea\css.css" />
+    <Content Include="admin\pages\eidea\js.js" />
+    <Content Include="admin\pages\ereport\ajax.js" />
+    <Content Include="admin\pages\ereport\css.css" />
+    <Content Include="admin\pages\ereport\js.js" />
+    <Content Include="admin\pages\icanlist\ajax.js" />
+    <Content Include="admin\pages\icanlist\css.css" />
+    <Content Include="admin\pages\icanlist\js.js" />
+    <Content Include="admin\pages\ican\ajax.js" />
+    <Content Include="admin\pages\ican\css.css" />
+    <Content Include="admin\pages\ican\js.js" />
+    <Content Include="admin\pages\bestIdeasCompetitionlist\ajax.js" />
+    <Content Include="admin\pages\bestIdeasCompetitionlist\css.css" />
+    <Content Include="admin\pages\bestIdeasCompetitionlist\js.js" />
+    <Content Include="admin\pages\bestIdeasCompetition\ajax.js" />
+    <Content Include="admin\pages\bestIdeasCompetition\css.css" />
+    <Content Include="admin\pages\bestIdeasCompetition\js.js" />
+    <Content Include="admin\pages\idealist\ajax.js" />
+    <Content Include="admin\pages\idealist\css.css" />
+    <Content Include="admin\pages\idealist\js.js" />
+    <Content Include="admin\pages\myIranlist\ajax.js" />
+    <Content Include="admin\pages\myIranlist\css.css" />
+    <Content Include="admin\pages\myIranlist\js.js" />
+    <Content Include="admin\pages\polllist\ajax.js" />
+    <Content Include="admin\pages\polllist\css.css" />
+    <Content Include="admin\pages\polllist\js.js" />
+    <Content Include="admin\pages\tag\ajax.js" />
+    <Content Include="admin\pages\tag\css.css" />
+    <Content Include="admin\pages\tag\js.js" />
+    <Content Include="admin\pages\reportlist\ajax.js" />
+    <Content Include="admin\pages\reportlist\css.css" />
+    <Content Include="admin\pages\reportlist\js.js" />
+    <Content Include="admin\pages\cnews\ajax.js" />
+    <Content Include="admin\pages\cnews\css.css" />
+    <Content Include="admin\pages\cnews\js.js" />
+    <Content Include="admin\polllist.aspx" />
+    <Content Include="admin\setting.aspx" />
+    <Content Include="admin\tag.aspx" />
+    <Content Include="admin\reportlist.aspx" />
+    <Content Include="admin\pages\report\ajax.js" />
+    <Content Include="admin\pages\report\css.css" />
+    <Content Include="admin\pages\report\js.js" />
+    <Content Include="admin\report.aspx" />
+    <Content Include="admin\pages\eevents\ajax.js" />
+    <Content Include="admin\pages\eevents\css.css" />
+    <Content Include="admin\pages\eevents\js.js" />
+    <Content Include="admin\pages\edownload\ajax.js" />
+    <Content Include="admin\pages\edownload\css.css" />
+    <Content Include="admin\pages\edownload\js.js" />
+    <Content Include="admin\pages\epublication\ajax.js" />
+    <Content Include="admin\pages\epublication\css.css" />
+    <Content Include="admin\pages\epublication\js.js" />
+    <Content Include="admin\pages\events\ajax.js" />
+    <Content Include="admin\pages\events\css.css" />
+    <Content Include="admin\pages\events\js.js" />
+    <Content Include="admin\pages\eventslist\ajax.js" />
+    <Content Include="admin\pages\eventslist\css.css" />
+    <Content Include="admin\pages\eventslist\js.js" />
+    <Content Include="admin\pages\download\ajax.js" />
+    <Content Include="admin\pages\download\css.css" />
+    <Content Include="admin\pages\download\js.js" />
+    <Content Include="admin\pages\downloadlist\ajax.js" />
+    <Content Include="admin\pages\downloadlist\css.css" />
+    <Content Include="admin\pages\downloadlist\js.js" />
+    <Content Include="admin\publicationlist.aspx" />
+    <Content Include="admin\pages\publicationlist\ajax.js" />
+    <Content Include="admin\pages\publicationlist\css.css" />
+    <Content Include="admin\pages\publicationlist\js.js" />
+    <Content Include="admin\publication.aspx" />
+    <Content Include="admin\pages\eio\ajax.js" />
+    <Content Include="admin\pages\eio\css.css" />
+    <Content Include="admin\pages\eio\js.js" />
+    <Content Include="admin\pages\enews\ajax.js" />
+    <Content Include="admin\pages\enews\css.css" />
+    <Content Include="admin\pages\enews\js.js" />
+    <Content Include="admin\pages\io\ajax.js" />
+    <Content Include="admin\pages\io\css.css" />
+    <Content Include="admin\pages\io\js.js" />
+    <Content Include="admin\pages\iolist\ajax.js" />
+    <Content Include="admin\pages\iolist\css.css" />
+    <Content Include="admin\pages\iolist\js.js" />
+    <Content Include="admin\pages\publication\ajax.js" />
+    <Content Include="admin\pages\publication\css.css" />
+    <Content Include="admin\pages\publication\js.js" />
+    <Content Include="admin\pages\news\ajax.js" />
+    <Content Include="admin\pages\news\css.css" />
+    <Content Include="admin\pages\news\js.js" />
+    <Content Include="admin\pages\newslist\ajax.js" />
+    <Content Include="admin\pages\newslist\css.css" />
+    <Content Include="admin\pages\newslist\js.js" />
+    <Content Include="admin\pages\userlist\ajax.js" />
+    <Content Include="admin\pages\userlist\css.css" />
+    <Content Include="admin\pages\userlist\js.js" />
+    <Content Include="admin\pages\push\ajax.js" />
+    <Content Include="admin\pages\push\css.css" />
+    <Content Include="admin\pages\push\js.js" />
+    <Content Include="admin\pages\partners\ajax.js" />
+    <Content Include="admin\pages\partners\css.css" />
+    <Content Include="admin\pages\partners\js.js" />
+    <Content Include="admin\news.aspx" />
+    <Content Include="admin\newslist.aspx" />
+    <Content Include="admin\cnews.aspx" />
+    <Content Include="admin\userlist.aspx" />
+    <Content Include="admin\push.aspx" />
+    <Content Include="admin\partners.aspx" />
+    <Content Include="admin\component\images\push.png" />
+    <Content Include="admin\component\images\relations.png" />
+    <Content Include="admin\oprators.aspx" />
+    <Content Include="admin\access.aspx" />
+    <Content Include="admin\component\css\main.css" />
+    <Content Include="admin\component\css\search.css" />
+    <Content Include="admin\component\images\access.png" />
+    <Content Include="admin\component\images\addoprator.png" />
+    <Content Include="admin\component\images\attach.png" />
+    <Content Include="admin\component\images\bg.png" />
+    <Content Include="admin\component\images\changeservice.png" />
+    <Content Include="admin\component\images\dashboard.png" />
+    <Content Include="admin\component\images\delete-red.png" />
+    <Content Include="admin\component\images\delete.png" />
+    <Content Include="admin\component\images\deny.png" />
+    <Content Include="admin\component\images\edit-green.png" />
+    <Content Include="admin\component\images\edit.png" />
+    <Content Include="admin\component\images\email.png" />
+    <Content Include="admin\component\images\file.png" />
+    <Content Include="admin\component\images\hide.png" />
+    <Content Include="admin\component\images\loading.gif" />
+    <Content Include="admin\component\images\logo.png" />
+    <Content Include="admin\component\images\mci.png" />
+    <Content Include="admin\component\images\newoption.png" />
+    <Content Include="admin\component\images\opacitybg.png" />
+    <Content Include="admin\component\images\password.png" />
+    <Content Include="admin\component\images\photo.png" />
+    <Content Include="admin\component\images\prequestions.png" />
+    <Content Include="admin\component\images\profile.png" />
+    <Content Include="admin\component\images\questions.png" />
+    <Content Include="admin\component\images\save.png" />
+    <Content Include="admin\component\images\saveloader.gif" />
+    <Content Include="admin\component\images\setting.png" />
+    <Content Include="admin\component\images\show.png" />
+    <Content Include="admin\component\images\show2.png" />
+    <Content Include="admin\component\images\sound.png" />
+    <Content Include="admin\component\images\tanalogo.png" />
+    <Content Include="admin\component\images\tas.png" />
+    <Content Include="admin\component\images\users.png" />
+    <Content Include="admin\component\images\video.png" />
+    <Content Include="admin\component\js\Core.js" />
+    <Content Include="admin\dashboard.aspx" />
+    <Content Include="admin\groups.aspx" />
+    <Content Include="admin\login.aspx" />
+    <Content Include="admin\logout.aspx" />
+    <Content Include="admin\pages\oprators\ajax.js" />
+    <Content Include="admin\pages\oprators\css.css" />
+    <Content Include="admin\pages\oprators\js.js" />
+    <Content Include="admin\pages\access\ajax.js" />
+    <Content Include="admin\pages\access\css.css" />
+    <Content Include="admin\pages\access\js.js" />
+    <Content Include="admin\pages\groups\ajax.js" />
+    <Content Include="admin\pages\groups\css.css" />
+    <Content Include="admin\pages\groups\js.js" />
+    <Content Include="admin\pages\login\ajax.js" />
+    <Content Include="admin\pages\login\css.css" />
+    <Content Include="admin\pages\login\js.js" />
+    <Content Include="admin\pages\master\css.css" />
+    <Content Include="admin\pages\master\js.js" />
+    <Content Include="chart.aspx" />
+    <Content Include="component\chart\exporting.js" />
+    <Content Include="component\chart\highcharts.js" />
+    <Content Include="component\datepicker\default.htm" />
+    <Content Include="component\datepicker\scripts\jquery.ui.datepicker-cc.all.min.js" />
+    <Content Include="component\datepicker\styles\images\bg.png" />
+    <Content Include="component\datepicker\styles\images\calendar.png" />
+    <Content Include="component\datepicker\styles\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="component\datepicker\styles\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="component\datepicker\styles\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="component\datepicker\styles\images\ui-bg_highlight-hard_20_0972a5_1x100.png" />
+    <Content Include="component\datepicker\styles\images\ui-bg_highlight-soft_33_003147_1x100.png" />
+    <Content Include="component\datepicker\styles\images\ui-bg_highlight-soft_35_222222_1x100.png" />
+    <Content Include="component\datepicker\styles\images\ui-bg_highlight-soft_44_444444_1x100.png" />
+    <Content Include="component\datepicker\styles\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="component\datepicker\styles\images\ui-bg_loop_25_000000_21x21.png" />
+    <Content Include="component\datepicker\styles\images\ui-icons_222222_256x240.png" />
+    <Content Include="component\datepicker\styles\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="component\datepicker\styles\images\ui-icons_a83300_256x240.png" />
+    <Content Include="component\datepicker\styles\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="component\datepicker\styles\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="component\datepicker\styles\jquery-ui-1.8.14.css" />
+    <Content Include="component\images\06.png" />
+    <Content Include="component\images\09.png" />
+    <Content Include="component\images\back.png" />
+    <Content Include="component\images\cloth.png" />
+    <Content Include="component\images\diabet.png" />
+    <Content Include="component\images\fitness.png" />
+    <Content Include="component\images\gameIC.png" />
+    <Content Include="component\images\giftIc.png" />
+    <Content Include="component\images\home_page_bg.gif" />
+    <Content Include="component\images\home_page_bg2.jpg" />
+    <Content Include="component\images\learning.png" />
+    <Content Include="component\images\learningIc.png" />
+    <Content Include="component\images\opacitybg.png" />
+    <Content Include="component\images\shadow.png" />
+    <Content Include="component\images\telegram.png" />
+    <Content Include="component\images\textgift.png" />
+    <Content Include="component\images\textgift2.png" />
+    <Content Include="component\jquery\jquery-1.11.3.min.js" />
+    <Content Include="component\jquery\jquery-migrate-1.0.0.js" />
+    <Content Include="component\jquery\jquery.easing.1.3.js" />
+    <Content Include="component\jquery\jquery.easing.compatibility.js" />
+    <Content Include="component\monthpicker\scripts\monthpicker.min.js" />
+    <Content Include="component\monthpicker\styles\monthpicker.css" />
+    <Content Include="component\simlComboBox\css.css" />
+    <Content Include="component\simlComboBox\images\arrow.png" />
+    <Content Include="component\simlComboBox\jquery.comboBox.js" />
+    <Content Include="component\simlNumericTextBox\jquery.nemericTextBox.js" />
+    <Content Include="component\tooltip\css\tipped\tipped.css" />
+    <Content Include="component\tooltip\example\css\style.css" />
+    <Content Include="component\tooltip\example\index.html" />
+    <Content Include="component\tooltip\js\tipped\tipped.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="pages\chart\ajax.js" />
+    <Content Include="pages\chart\css.css" />
+    <Content Include="pages\chart\js.js" />
+    <Content Include="service\pushservice.asmx" />
+    <Content Include="service\uploadService.asmx" />
+    <Content Include="service\userservice.asmx" />
+    <Content Include="FileDownloader.ashx" />
+    <Content Include="admin\icanUploader.ashx" />
+    <Content Include="admin\bestIdeasCompetitionUploader.ashx" />
+    <Content Include="admin\ideaUploader.ashx" />
+    <Content Include="admin\creativityCompetitionUploader.ashx" />
+    <Content Include="admin\answerUploader.ashx" />
+    <Content Include="packages.config" />
+    <Content Include="admin\myIranUploader.ashx" />
+    <Content Include="admin\responseUploader.ashx" />
+    <Content Include="admin\component\font\BYekan.eot" />
+    <Content Include="admin\component\font\BYekan.ttf" />
+    <Content Include="admin\component\font\BYekan.woff" />
+    <Content Include="admin\pollUploader.ashx" />
+    <Content Include="admin\settingUploader.ashx" />
+    <None Include="Properties\PublishProfiles\33.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="uploads\creativityCompetitions\images\appinno_20161212130554289_f8f6160a3d4947cf84a4813f29e3aa7e.jpeg" />
+    <Content Include="uploads\creativityCompetitions\images\appinno_20161212144646453_259234b03e994e17b2933aa948dad8b2.jpeg" />
+    <Content Include="uploads\ican\images\appinno_20161106124009189_9b10e5a092e245dbb4a45fa936609d57.png" />
+    <Content Include="uploads\ican\images\appinno_20161114150255347_293bcd7ee12b4bfeb76a7beea040121b.png" />
+    <Content Include="uploads\ican\images\appinno_20161114151726793_4b9e88ce1c1d4d648f05628c7cf5fa3f.png" />
+    <Content Include="uploads\ican\images\appinno_20161114152152811_278bdda1b1d44f1d8f892b095693d259.png" />
+    <Content Include="uploads\ican\images\appinno_20161114160642204_1dfc9cbeafbe400b8636361ef366cdb2.png" />
+    <Content Include="uploads\ican\images\appinno_20161114160739901_7f6ceb0351ea4dc3a4cbe51dcda3c16c.png" />
+    <Content Include="uploads\ican\images\appinno_20161114161015628_2a7f8b5397a047ff871dab98ad959cb1.png" />
+    <Content Include="uploads\ican\images\appinno_20161114161220717_2149df4580cd4101a9d3ab69741c11b4.png" />
+    <Content Include="uploads\ican\images\appinno_20161114161514304_689e4417706546da87f129c967c02c77.png" />
+    <Content Include="uploads\ican\images\appinno_20161114164420014_c40d64cadc504afebaf6409acbce71b6.png" />
+    <Content Include="uploads\ican\images\appinno_20161114165413885_7ec590c5e6324e3ba6a48ebfc0adc9ca.png" />
+    <Content Include="uploads\ican\images\appinno_20161114165444411_8a4cfb13f59f4023af8614097e87fabe.png" />
+    <Content Include="uploads\ican\images\appinno_20161114172456569_3ad139ae7af74056a859e350b75994ea.png" />
+    <Content Include="uploads\ican\images\appinno_20161114172523920_a97eb88a35bd4dc69547a2a8484a20e9.png" />
+    <Content Include="uploads\ican\images\appinno_20161114173952158_de7fc431e45c4962920c0d30c577e2d1.png" />
+    <Content Include="uploads\ican\images\appinno_20161114174220602_9b9b3c583ece41e4948ff54162efd7ae.png" />
+    <Content Include="uploads\message\1.txt" />
+    <Content Include="uploads\message\appinno_20161126163833773_0474867b708a42ec99b72413c6b310d9.txt" />
+    <Content Include="uploads\message\appinno_20161126164059740_877e6aa24eff4811852192cfcce67ec5.txt" />
+    <Content Include="uploads\message\appinno_20161126164206408_250fd376462f4e708020ff779962b279.txt" />
+    <Content Include="uploads\message\appinno_20161126164323218_528f5434cb0946e6811cf289d513869c.txt" />
+    <Content Include="uploads\message\appinno_20161126164423417_b7da8b113a904708b5fc646f68367f49.txt" />
+    <Content Include="uploads\message\appinno_20161126164452472_aa086f9e009542e99b40c8cae980f403.txt" />
+    <Content Include="uploads\message\appinno_20161126164715287_8c4b29df54134dfebfc2dbb3536ca9dd.txt" />
+    <Content Include="uploads\message\appinno_20161126164915719_86ffbffdedb94f98abcb299b94a8a6a2.txt" />
+    <Content Include="uploads\message\appinno_20161126174627889_815536d4b7da4a32ab5cefd2d0427ca1.txt" />
+    <Content Include="uploads\message\appinno_20161126175834048_4526e159f2eb4951a77661a7f45279df.txt" />
+    <Content Include="uploads\message\appinno_20161127094541776_9c09bd03e5f24465be4441c310c9f48c.txt" />
+    <Content Include="uploads\message\appinno_20161219160414972_e69eef60f17d4775b5b8e216352aa80e.jpg" />
+    <Content Include="uploads\message\appinno_20161219160255844_cca8cae80b9b48b4be995d59cb799837.png" />
+    <Content Include="uploads\myIranCompetitions\images\appinno_20161218115522869_abebf2c4f29b47fd89fbd3e24fca951b.jpeg" />
+    <Content Include="uploads\news\images\appinno_20151226230747361_9361eda16fb94cf6b31a72c6daa5177e.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160203043228449_a624ea9d218245cd96504cd0c91d2b76.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160203043718565_5bfa8bc97af542c0a97a1b8b9a281d29.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160203043926765_aed51440984a4e5fb5f0fee2a98b3c7d.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160203074757427_fc0e7ef90d084892be4cb41b5394c90f.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160203140610873_b1e91461a1344be593c24e370d86d1a7.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160203140809990_b2729421a16d43b5b38c262c3181ab60.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160203141034801_5b253b2d6e2d4d2f8ed20a090c6bda81.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160203141306780_0c474e2b7cd74eee8fdb9d0af9b973a4.png" />
+    <Content Include="uploads\news\images\appinno_20160203141436398_85e7e948bf2445908b6201a75e2f48ab.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160203141906529_66b447d453c54f9aab76cb364f3a5a5c.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160203142242530_e33ab345dbf24d2f82b517ef77bd6886.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160203142242532_2e9f993d127a4415a313cf0dc3219aa7.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160203142242535_21efe333221644cba301f3f410dfdb70.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160210022942428_636f60edbc2e455d90fdb48c22b605d1.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160210055457000_232d589f33924bc09a85d0abf36deb2a.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160210163821221_07cfe63867144c3481c34a7cb22c6f15.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160210163821230_e7948005ce474a7fbd463bd994a4d063.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160213042337039_1cdfa4d7c82d408f9385c9e239f1a5a8.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160215071755720_1caec6a684f6411d9a32a6c273ca4e5f.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160217055406473_52f4b9f4225f442c91f92873992a9aee.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160221071348090_7d457392da0e4a67975f40a584c8f6f0.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160223070506969_3b94118b8a234c319d01380c56ebe283.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160223070506979_740fdab658bb4e83bb57a34f9ca7154e.png" />
+    <Content Include="uploads\news\images\appinno_20160305043550694_a0618c01a0c34776b1dd2418d19b4d85.png" />
+    <Content Include="uploads\news\images\appinno_20160402213321141_47992ca282f44e5fb9dee5c9c43f5159.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160404232152637_c367d0b9a904423fa5cd9a754353ecb3.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160409014113005_28221d76496a40c0b8ca0c434438f1ce.png" />
+    <Content Include="uploads\news\images\appinno_20160413012632848_aaad7c3efbc44d87bdc52330268754ee.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160419050234046_ddd81940a1f04a708d470300af04a013.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160424050042899_a052908b11a04f4e87af762b5d961c41.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160427062000030_b0a17f7a70544748b5dbb325db9a7c8f.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160430042027505_6e2ed30479eb420abaf243413ad45450.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160503223714833_39c4bf91f2d94c6b9362de31edef1c05.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160518170512457_5537a462cbfe4a02b3cfc8e3dcaaa3b7.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160519122643253_f2dffa5c477e42c0820bf2eefa438e21.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160523101049007_2046ad7246c941919f133aae632c0e0b.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160524031225985_84d6359f92cf4e1bb354adcbd152c8bf.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160528140333186_388013eee234466987804d391722282e.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160607141045865_c4d018226ac1461eac4109da3d7325cd.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160611131621727_372c0d6f4a964a43a69ce087ecd8db6c.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160614182942781_3089fc962f6747f69623fc9f47f8f02d.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160621151804664_0e0468af91764a508a9f8583500fdef4.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160621153337446_031c984627fa43e385b9a79f94937076.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160628143003825_a3e196a91ba34e5d8bad5f009e5b8000.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160702162423162_fdf4937a7e3749d5beacb854b13fb32f.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160703130749810_ce862cc3be2c431c8f7cb83da60a2ab2.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160712172350547_2945576517094eb8856ca50040fc33a3.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160713131824097_dc0197dc41424f638fc28d4acb7f19d4.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160716075514319_af1f1cf75d564724a2c2bc6bd00de746.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160723122418149_15f21313434644f1bd8cc4798fd810c0.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160724114856221_029ce40602e048b28bbb9d8ea30c4add.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160726132308434_09fd2643864c4274b49a61fd8251f936.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160727163959791_5d11fed45fc04cad8b88405cf3b54376.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160806122749912_eb5203d165da482fa229e547521fe88f.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160810210944551_b3cf0ac298744452858e12b9c68de18a.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160817133242274_bafbb84c1feb4be38e769234058cd4e9.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160821145414988_cef62a11f1a2478bae3a58b89a7f93b1.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160825132929653_cf1cb72395714810be37f458172bfb0a.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160903120511070_e2565d52306e4972bd43734c3d7e1c4c.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160906121053970_f21067c9534c4b70883455a306b1959e.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160907125955521_a5d6bb0217db4939b298304950fc3af8.png" />
+    <Content Include="uploads\news\images\appinno_20160911111923648_e3037e3bcabd4038a88955dc608e331d.jpeg" />
+    <Content Include="uploads\news\images\appinno_20160922191445477_32fa43c6721442ff83d7b6f77395deb6.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161002100801377_be54c0da2479465eb07be009970c15c6.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161003122143530_c0a39f5f63da4aca8aec21b4618bea3f.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161009122110092_ba3a95bbeba4407eaacc3ff5f3bb1d6e.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161017091530147_aeb95083ff274e109ec0b7f625868552.png" />
+    <Content Include="uploads\news\images\appinno_20161018140845893_6be00c744cbc4676b8acdf8cdbc0a85c.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161022185523562_188463abc9334d17991c909bcaf53f96.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161105132133438_6bfd79bcf71e44bba1f3373e3ca95909.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161106030110905_7247cbd311524c8a830ed170c3403631.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161106115553932_da000f4609714edbadbb3ee0f4a42879.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161106174620126_7dfedf3fe4e64281861684aade2a5d9c.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161107105721235_bac2644c66f845959a5d9f593209c9ad.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161107110714171_44f2db65aee64345998818552e9f4137.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161108094853269_9d581e1f01e047f1a0d41bc0ca613c9f.png" />
+    <Content Include="uploads\news\images\appinno_20161108163929274_1681894c5dc244d3a885fe51109990f7.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161109153923553_1e31717723b44cc7bdb89d1664242401.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161109154051933_38f4b98aaa9a4cba8aff68ef21d5b2ea.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161112213751416_9a2353df0b8f4121a356d3da16e3f64b.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161115084848438_b60231a5245f4900b2e56c9a5f77d691.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161117134823638_fbece37171fd4d7599ea3ac7742ff1aa.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161117165910801_285ae48c55bb42c9b1cc873e099584e7.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161119154616672_82e849b5384a4627a70d2e5b3d6d5dcd.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161119160625088_41a1b1154ba64879bc155bf0d8d037e5.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161121195608898_9174a3195a1647a1a11926e5ff0a4fb5.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161121200516631_7f6d7ea1eb4d49f896d33f486a88d969.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161123133408802_ec60c6c04b3d42c295893c3c37419be0.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161129135426773_95c1bbcec01043cc90e8d5a62b8e27ad.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161129135651510_945b3297b5244f5e87faf52b4fc9911e.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161205103144743_3cb83d7a01b7459aaf664e12c6c2c5ab.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161205111733346_2d91ef8ee78b4e34afcd3ec3ee3e2dbe.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161207172347344_31130b278d3a420eb0231bc45ceb44a7.jpeg" />
+    <Content Include="uploads\news\images\appinno_20161208220624078_44408107af33438e8a83209c0086559e.jpeg" />
+    <Content Include="uploads\news\images\uploaded_image_20150913120523474_414831db74cc44a49d077ee20e9ca4d4.jpeg" />
+    <Content Include="uploads\news\images\uploaded_image_20150913120816303_ad88a9b6b33547e694e0ec50012f2c99.jpeg" />
+    <Content Include="uploads\news\images\uploaded_image_20150913120816329_039d85f5081a4a4b9d4ebb2bdbb32538.jpeg" />
+    <Content Include="uploads\news\images\uploaded_image_20150913122606607_e52c35bb23ac44fb87f3db4a3267f4a0.jpeg" />
+    <Content Include="uploads\news\videos\uploaded_video_20150913122606621_2e310fce741d44b28b793aed8c52873d.mp4" />
+    <Content Include="uploads\poll\images\img_30_.PNG" />
+    <Content Include="uploads\poll\videos\vid_31_.mp4" />
+    <Content Include="uploads\setting\adminimage\a.PNG" />
+    <Content Include="uploads\setting\adminimage\appinno_20170119155949898_45fcd736d9d043d180733d3fed96d78e.png" />
+    <Content Include="uploads\setting\adminimage\appinno_20170119160603562_50b146ebd4eb439c81930d395d9df4d4.png" />
+    <Content Include="uploads\setting\adminimage\appinno_20170119160848404_d713473dce644aa4ac39a78506121f9d.jpeg" />
+    <Content Include="uploads\setting\adminimage\appinno_20170119161142765_fb2d9997c6d446ca9ea7c0e358a75879.png" />
+    <Content Include="uploads\setting\adminimage\appinno_20170119162643694_10301d13542544a397fd1c83569d7770.png" />
+    <Content Include="uploads\setting\adminimage\appinno_20170119164927421_33855549fab946ff922bcc54c7c6ebed.png" />
+    <Content Include="uploads\setting\adminimage\appinno_20170119165021543_ee822c1b9fc14db4aed0b824178e8df9.png" />
+    <Content Include="Web References\smsProxy\MessagesBL.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\smsProxy\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\smsProxy\Send.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\epoll.aspx.cs">
+      <DependentUpon>epoll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\epoll.aspx.designer.cs">
+      <DependentUpon>epoll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\message.aspx.cs">
+      <DependentUpon>message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\message.aspx.designer.cs">
+      <DependentUpon>message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\poll.aspx.cs">
+      <DependentUpon>poll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\poll.aspx.designer.cs">
+      <DependentUpon>poll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\pollUploader.ashx.cs">
+      <DependentUpon>pollUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\responseUploader.ashx.cs">
+      <DependentUpon>responseUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\eresponse.aspx.cs">
+      <DependentUpon>eresponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\eresponse.aspx.designer.cs">
+      <DependentUpon>eresponse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\responselist.aspx.cs">
+      <DependentUpon>responselist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\responselist.aspx.designer.cs">
+      <DependentUpon>responselist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\answerlist.aspx.cs">
+      <DependentUpon>answerlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\answerlist.aspx.designer.cs">
+      <DependentUpon>answerlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\myIranUploader.ashx.cs">
+      <DependentUpon>myIranUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\emyIran.aspx.cs">
+      <DependentUpon>emyIran.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\emyIran.aspx.designer.cs">
+      <DependentUpon>emyIran.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\myIran.aspx.cs">
+      <DependentUpon>myIran.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\myIran.aspx.designer.cs">
+      <DependentUpon>myIran.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\creativityCompetitionUploader.ashx.cs">
+      <DependentUpon>creativityCompetitionUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\creativityCompetition.aspx.cs">
+      <DependentUpon>creativityCompetition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\creativityCompetition.aspx.designer.cs">
+      <DependentUpon>creativityCompetition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\bestIdeasCompetition.aspx.cs">
+      <DependentUpon>bestIdeasCompetition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\bestIdeasCompetition.aspx.designer.cs">
+      <DependentUpon>bestIdeasCompetition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\bestIdeasCompetitionlist.aspx.cs">
+      <DependentUpon>bestIdeasCompetitionlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\bestIdeasCompetitionlist.aspx.designer.cs">
+      <DependentUpon>bestIdeasCompetitionlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\cio.aspx.cs">
+      <DependentUpon>cio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\cio.aspx.designer.cs">
+      <DependentUpon>cio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\cdownload.aspx.cs">
+      <DependentUpon>cdownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\cdownload.aspx.designer.cs">
+      <DependentUpon>cdownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\cevent.aspx.cs">
+      <DependentUpon>cevent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\cevent.aspx.designer.cs">
+      <DependentUpon>cevent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\cican.aspx.cs">
+      <DependentUpon>cican.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\cican.aspx.designer.cs">
+      <DependentUpon>cican.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\creativityCompetitionlist.aspx.cs">
+      <DependentUpon>creativityCompetitionlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\creativityCompetitionlist.aspx.designer.cs">
+      <DependentUpon>creativityCompetitionlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\creport.aspx.cs">
+      <DependentUpon>creport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\creport.aspx.designer.cs">
+      <DependentUpon>creport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\cpublication.aspx.cs">
+      <DependentUpon>cpublication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\cpublication.aspx.designer.cs">
+      <DependentUpon>cpublication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ebestIdeasCompetition.aspx.cs">
+      <DependentUpon>ebestIdeasCompetition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ebestIdeasCompetition.aspx.designer.cs">
+      <DependentUpon>ebestIdeasCompetition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ecreativityCompetition.aspx.cs">
+      <DependentUpon>ecreativityCompetition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ecreativityCompetition.aspx.designer.cs">
+      <DependentUpon>ecreativityCompetition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\eanswer.aspx.cs">
+      <DependentUpon>eanswer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\eanswer.aspx.designer.cs">
+      <DependentUpon>eanswer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\eidea.aspx.cs">
+      <DependentUpon>eidea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\eidea.aspx.designer.cs">
+      <DependentUpon>eidea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\eio.aspx.cs">
+      <DependentUpon>eio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\eio.aspx.designer.cs">
+      <DependentUpon>eio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\eevents.aspx.cs">
+      <DependentUpon>eevents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\eevents.aspx.designer.cs">
+      <DependentUpon>eevents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\edownload.aspx.cs">
+      <DependentUpon>edownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\edownload.aspx.designer.cs">
+      <DependentUpon>edownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\eican.aspx.cs">
+      <DependentUpon>eican.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\eican.aspx.designer.cs">
+      <DependentUpon>eican.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ereport.aspx.cs">
+      <DependentUpon>ereport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ereport.aspx.designer.cs">
+      <DependentUpon>ereport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\epublication.aspx.cs">
+      <DependentUpon>epublication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\epublication.aspx.designer.cs">
+      <DependentUpon>epublication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\enews.aspx.cs">
+      <DependentUpon>enews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\enews.aspx.designer.cs">
+      <DependentUpon>enews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ican.aspx.cs">
+      <DependentUpon>ican.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ican.aspx.designer.cs">
+      <DependentUpon>ican.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\icanlist.aspx.cs">
+      <DependentUpon>icanlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\icanlist.aspx.designer.cs">
+      <DependentUpon>icanlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\icanUploader.ashx.cs">
+      <DependentUpon>icanUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\bestIdeasCompetitionUploader.ashx.cs">
+      <DependentUpon>bestIdeasCompetitionUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\idealist.aspx.cs">
+      <DependentUpon>idealist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\idealist.aspx.designer.cs">
+      <DependentUpon>idealist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\answerUploader.ashx.cs">
+      <DependentUpon>answerUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ideaUploader.ashx.cs">
+      <DependentUpon>ideaUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\master.Master.cs">
+      <DependentUpon>master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\master.Master.designer.cs">
+      <DependentUpon>master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\myIranlist.aspx.cs">
+      <DependentUpon>myIranlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\myIranlist.aspx.designer.cs">
+      <DependentUpon>myIranlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\polllist.aspx.cs">
+      <DependentUpon>polllist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\polllist.aspx.designer.cs">
+      <DependentUpon>polllist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\setting.aspx.cs">
+      <DependentUpon>setting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\setting.aspx.designer.cs">
+      <DependentUpon>setting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\settingUploader.ashx.cs">
+      <DependentUpon>settingUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\tag.aspx.cs">
+      <DependentUpon>tag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\tag.aspx.designer.cs">
+      <DependentUpon>tag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\reportlist.aspx.cs">
+      <DependentUpon>reportlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\reportlist.aspx.designer.cs">
+      <DependentUpon>reportlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\reportUploader.ashx.cs">
+      <DependentUpon>reportUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\cnews.aspx.cs">
+      <DependentUpon>cnews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\cnews.aspx.designer.cs">
+      <DependentUpon>cnews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chart.aspx.cs">
+      <DependentUpon>chart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chart.aspx.designer.cs">
+      <DependentUpon>chart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess.cs">
+      <DependentUpon>DataAccess.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="FileDownloader.ashx.cs">
+      <DependentUpon>FileDownloader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="helper.ashx.cs">
+      <DependentUpon>helper.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\io.aspx.cs">
+      <DependentUpon>io.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\io.aspx.designer.cs">
+      <DependentUpon>io.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\events.aspx.cs">
+      <DependentUpon>events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\events.aspx.designer.cs">
+      <DependentUpon>events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\eventsUploader.ashx.cs">
+      <DependentUpon>eventsUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\eventslist.aspx.cs">
+      <DependentUpon>eventslist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\eventslist.aspx.designer.cs">
+      <DependentUpon>eventslist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\download.aspx.cs">
+      <DependentUpon>download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\download.aspx.designer.cs">
+      <DependentUpon>download.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\downloadUploader.ashx.cs">
+      <DependentUpon>downloadUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\downloadlist.aspx.cs">
+      <DependentUpon>downloadlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\downloadlist.aspx.designer.cs">
+      <DependentUpon>downloadlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\report.aspx.cs">
+      <DependentUpon>report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\report.aspx.designer.cs">
+      <DependentUpon>report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\publicationlist.aspx.cs">
+      <DependentUpon>publicationlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\publicationlist.aspx.designer.cs">
+      <DependentUpon>publicationlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\publicationUploader.ashx.cs">
+      <DependentUpon>publicationUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\publication.aspx.cs">
+      <DependentUpon>publication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\publication.aspx.designer.cs">
+      <DependentUpon>publication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\news.aspx.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\news.aspx.designer.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ioUploader.ashx.cs">
+      <DependentUpon>ioUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\iolist.aspx.cs">
+      <DependentUpon>iolist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\iolist.aspx.designer.cs">
+      <DependentUpon>iolist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\newsUploader.ashx.cs">
+      <DependentUpon>newsUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\newslist.aspx.cs">
+      <DependentUpon>newslist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\newslist.aspx.designer.cs">
+      <DependentUpon>newslist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\userlist.aspx.cs">
+      <DependentUpon>userlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\userlist.aspx.designer.cs">
+      <DependentUpon>userlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\push.aspx.cs">
+      <DependentUpon>push.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\push.aspx.designer.cs">
+      <DependentUpon>push.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\partners.aspx.cs">
+      <DependentUpon>partners.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\partners.aspx.designer.cs">
+      <DependentUpon>partners.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\oprators.aspx.cs">
+      <DependentUpon>oprators.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\oprators.aspx.designer.cs">
+      <DependentUpon>oprators.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\access.aspx.cs">
+      <DependentUpon>access.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\access.aspx.designer.cs">
+      <DependentUpon>access.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\groups.aspx.cs">
+      <DependentUpon>groups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\groups.aspx.designer.cs">
+      <DependentUpon>groups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\partnersUploader.ashx.cs">
+      <DependentUpon>partnersUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCollection\Access.cs" />
+    <Compile Include="ClassCollection\Excel.cs" />
+    <Compile Include="ClassCollection\Message.cs" />
+    <Compile Include="ClassCollection\Methods.cs" />
+    <Compile Include="ClassCollection\Model.cs" />
+    <Compile Include="ClassCollection\Search.cs" />
+    <Compile Include="DataAccess.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataAccess.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="service\pushservice.asmx.cs">
+      <DependentUpon>pushservice.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="service\uploadService.asmx.cs">
+      <DependentUpon>uploadService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="service\userservice.asmx.cs">
+      <DependentUpon>userservice.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Web References\smsProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="uploads\answer\images\" />
+    <Folder Include="uploads\answer\videos\" />
+    <Folder Include="uploads\bestIdeaCompetitions\images\" />
+    <Folder Include="uploads\bestIdeaCompetitions\videos\" />
+    <Folder Include="uploads\creativityCompetitions\videos\" />
+    <Folder Include="uploads\download\files\" />
+    <Folder Include="uploads\download\images\" />
+    <Folder Include="uploads\event\images\" />
+    <Folder Include="uploads\event\videos\" />
+    <Folder Include="uploads\files\" />
+    <Folder Include="uploads\ican\files\" />
+    <Folder Include="uploads\ican\videos\" />
+    <Folder Include="uploads\idea\images\" />
+    <Folder Include="uploads\idea\videos\" />
+    <Folder Include="uploads\io\images\" />
+    <Folder Include="uploads\io\videos\" />
+    <Folder Include="uploads\myIranCompetitions\videos\" />
+    <Folder Include="uploads\publication\images\" />
+    <Folder Include="uploads\publication\videos\" />
+    <Folder Include="uploads\report\images\" />
+    <Folder Include="uploads\response\images\" />
+    <Folder Include="uploads\response\videos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataAccess.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataAccess.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="admin\partnersUploader.ashx" />
+    <Content Include="admin\newsUploader.ashx" />
+    <Content Include="admin\ioUploader.ashx" />
+    <Content Include="admin\publicationUploader.ashx" />
+    <Content Include="admin\eventsUploader.ashx" />
+    <Content Include="admin\downloadUploader.ashx" />
+    <Content Include="helper.ashx" />
+    <Content Include="admin\reportUploader.ashx" />
+    <None Include="Properties\PublishProfiles\p0.pubxml" />
+    <None Include="Web References\smsProxy\Send.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataAccess.dbml.layout">
+      <DependentUpon>DataAccess.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://87.107.121.54/Post/Send.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\smsProxy\</RelPath>
+      <UpdateFromURL>http://87.107.121.54/Post/Send.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>AppinnoNew_smsProxy_Send</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>21457</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:21457/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

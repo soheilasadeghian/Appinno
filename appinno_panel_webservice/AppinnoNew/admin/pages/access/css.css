@@ -1,0 +1,289 @@
+﻿.right-panel {
+    width: 240px;
+    float: right;
+    padding: 10px 0px 10px 0px;
+}
+
+.left-panel {
+    width: 750px;
+    float: right;
+    padding: 10px 10px 10px 0px;
+}
+
+.header-group {
+    height: 20px;
+    text-align: right;
+    padding: 8px 5px 5px 5px;
+    font-size: 0.85em;
+    display: block;
+    background-color: #2fc2da;
+    /*border-right: 3px solid #437a81;*/
+    margin-bottom: 3px;
+    color: #fff;
+}
+
+
+.group-list {
+    background-color: #fff;
+    padding: 5px;
+}
+
+    .group-list .selected {
+    }
+
+    .group-list .item {
+        overflow: hidden;
+        background-color: #d5f2ff;
+        margin:0px 0px 3px 0px;
+    }
+
+        .group-list .item .title {
+            height: 17px;
+            text-align: right;
+            padding: 8px 5px 5px 5px;
+            font-size: 0.7em;
+            display: block;
+            cursor: pointer;
+            margin-bottom: 2px;
+            overflow: hidden;
+        }
+
+        .group-list .item .tools {
+            float: left;
+            display: block;
+            width: 100px;
+            height: 30px;
+        }
+
+            .group-list .item .tools .delete {
+                background-image: url('../../component/images/delete-red.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+                height: 30px;
+                width: 30px;
+                display: block;
+                float: left;
+                cursor: pointer;
+            }
+
+            .group-list .item .tools .edit {
+                background-image: url('../../component/images/edit-green.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+                height: 30px;
+                width: 30px;
+                display: block;
+                float: left;
+                cursor: pointer;
+            }
+
+        .group-list .item:hover {
+            background-color: #69cbdf;
+            color: #fff;
+        }
+
+    .group-list .insert {
+        height: 33px;
+        margin: 5px 0px 0px 0px;
+    }
+
+        .group-list .insert .button {
+            height: 33px !important;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 5px;
+            width: 43px;
+            border: 1px solid #76c6db;
+            color: #00abcb !important;
+            cursor: pointer;
+            float: left;
+            background-color: #e1e1e1;
+            outline: none;
+        }
+
+            .group-list .insert .button:hover {
+                background-color: #cac8c8;
+            }
+
+    .group-list .edit-panel .button:hover {
+        background-color: #cac8c8;
+    }
+
+.pager {
+    float:right;
+    margin-top:5px;
+}
+
+    .pager .page {
+        display: block;
+        background-color: #74b4b5;
+        color: #fff;
+        padding: 5px;
+        font-size: 0.8em;
+        cursor: pointer;
+        width: 30px;
+        float: right;
+        text-align:center;
+    }
+
+        .pager .page:hover {
+            background-color: #378a8b;
+        }
+
+    .pager .selected {
+        background-color: #267172;
+        cursor: default;
+    }
+
+
+.new-access-window {
+    display: none;
+}
+
+    .new-access-window .background {
+        position: fixed;
+        z-index: 1001;
+        top: 0;
+        left: 0;
+        bottom: 0px;
+        right: 0px;
+        background-image: url('../../component/images/opacitybg.png');
+        background-repeat: repeat;
+    }
+
+    .new-access-window .window {
+        position: absolute;
+        z-index: 1002;
+        top: 20%;
+        left: 50%;
+        width: 700px;
+        height: 610px;
+        background-color: #fff;
+        border: 1px solid #515151;
+        margin: -150px 0px 0px -350px;
+        padding: 10px;
+    }
+
+        .new-access-window .window .access-title {
+            height: 30px;
+            margin: 0px auto 5px auto;
+        }
+
+        .new-access-window .window .save {
+            height: 33px !important;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 5px;
+            width: 43px;
+            border: 1px solid #76c6db;
+            color: #00abcb !important;
+            cursor: pointer;
+            float: left;
+            background-color: #e1e1e1;
+            outline: none;
+            margin-left: 10px;
+        }
+
+            .new-access-window .window .save:hover {
+                background-color: #cac8c8;
+            }
+
+
+        .new-access-window .window .access-title span {
+            display: block;
+            float: right;
+            width: 50px;
+            color: #fff;
+            font-size: 0.8em;
+            text-align: right;
+            padding: 8px 5px 0px 0px;
+            background-color: #545e6d;
+            height: 22px;
+        }
+
+        .new-access-window .window .access-title input {
+            height: 18px;
+            border: 1px solid #545e6d;
+            width: 395px;
+            color: #545e6d;
+            padding: 5px;
+            font-size: 0.8em;
+        }
+
+        .new-access-window .window .header-row {
+            height: 35px;
+            display: block;
+            margin: 0px 0px 2px 0px;
+        }
+
+            .new-access-window .window .header-row .cell {
+                width: 95px;
+                height: 15px;
+                padding: 10px;
+                float: right;
+                text-align: center;
+                color: #787676;
+            }
+
+        .new-access-window .window .header-even {
+            background-color: #f9d1af;
+        }
+
+        .new-access-window .window .header-odd {
+            background-color: #f6ba87;
+        }
+
+        .new-access-window .window .header-title {
+            background-color: #ec8523;
+            color: #fff !important;
+        }
+
+        .new-access-window .window .row {
+            height: 30px;
+            display: block;
+            margin: 0px 0px 2px 0px;
+        }
+
+            .new-access-window .window .row .cell {
+                width: 95px;
+                height: 24px;
+                padding: 3px 10px 3px 10px;
+                float: right;
+                text-align: center;
+                color: #fff;
+                font-size: 0.8em;
+            }
+
+                .new-access-window .window .row .cell .check {
+                    width: 40px;
+                    height: 100%;
+                    margin: 0px auto 0px auto;
+                    display: block;
+                    cursor: pointer;
+                }
+
+            .new-access-window .window .row .deny {
+                background-image: url('../../component/images/deny.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+
+            .new-access-window .window .row .access {
+                background-image: url('../../component/images/access.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+
+        .new-access-window .window .even {
+            background-color: #7ddce4;
+        }
+
+        .new-access-window .window .odd {
+            background-color: #6fd5de;
+        }
+
+        .new-access-window .window .title {
+            background-color: #54c5d0;
+            padding-top: 8px !important;
+            height: 19px !important;
+        }

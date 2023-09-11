@@ -23,7 +23,7 @@ This repository (Appinno) includes two projects:
 ## Installation Steps 📦 
 1. Restore DB in SQL Server from the DB file in root of repository (AppInnonew.bak.sql)<br/>
 2. Open Web Service Solution in Visual Studio and build the project <br/>
-3. Execute (F5) to run. Browser will show Homepage of website panel.(the picture of homepage is end of this readme) user:sa,pass:sa<br/>
+3. Execute (F5) to run. Browser will show Homepage of website panel.(the picture of homepage is end of this readme) user:'sa',pass:'sa'<br/>
 4. Open Appinno Website Solution in Visual Studio and build the project <br/>
 3. Execute (F5) to run. Browser will show Homepage of website.(the picture of homepage is end of this readme)<br/>
 
@@ -34,9 +34,11 @@ This repository (Appinno) includes two projects:
  
 
 
-Appinno Website:\\
+Appinno Website:\
 ![alt text](https://github.com/soheilasadeghian/Appinno/blob/main/screenshot.png)
 
+Appinno panel:\
+![alt text](https://github.com/soheilasadeghian/Appinno/blob/main/panel_home.PNG)
 
 ## Support
 For support, [click here](https://github.com/soheilasadeghian).

@@ -27,18 +27,18 @@ This repository (Appinno) includes two projects:
 4. Open Appinno Website Solution in Visual Studio and build the project <br/>
 3. Execute (F5) to run. Browser will show Homepage of website.(the picture of homepage is end of this readme)<br/>
 
-
-
-
-## implement of this requests is here: [`code`](https://github.com/soheilasadeghian/HamiDiabet/blob/main/hamidiabetSite/HamiDiabet/ClassCollection/User.cs)<br>
+## implement of this requests is here:
  
 
 
-Appinno Website:\
+## Appinno Website:
 ![alt text](https://github.com/soheilasadeghian/Appinno/blob/main/screenshot.png)
 
-Appinno panel:\
+## Appinno panel:
 ![alt text](https://github.com/soheilasadeghian/Appinno/blob/main/panel_home.PNG)
+
+## License
+[MIT](https://github.com/soheilasadeghian/Appinno/blob/main/LICENSE)
 
 ## Support
 For support, [click here](https://github.com/soheilasadeghian).

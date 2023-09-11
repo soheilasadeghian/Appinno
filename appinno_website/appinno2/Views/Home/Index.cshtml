@@ -1,0 +1,177 @@
+﻿@model appinno2.Models.Index
+@{
+    ViewBag.Title = "Home Page";
+}
+<ul class="tab morethan768">
+    <li><a href="~/" class="tablinks active" @*onclick="openCity(event, 'HomePage')"*@ id="first"><div class="tabicon fa fa-home"></div><span>خانه</span></a></li>
+    <li><a href="~/News/1" class="tablinks"><div class="tabicon fa fa-newspaper-o"></div><span>خبرها</span></a></li>
+    <li><a href="~/Events/1" class="tablinks"><div class="tabicon fa fa-calendar"></div><span>رویدادها</span></a></li>
+    <li><a href="~/Publications/1" class="tablinks"><div><img class="imgtab" src="~/Content/images/publisher.png" /></div><span>انتشارات</span></a></li>
+    <li><a href="~/Downloads/1" class="tablinks"><div class="tabicon fa fa-download"></div><span>دانلود</span></a></li>
+    <li><a href="~/Organizations/1" class="tablinks"><div class="tabicon fa fa-sitemap"></div><span>سازمانها</span></a></li>
+    <li><a href="~/Charts/1" class="tablinks"><div><img class="imgtab" src="~/Content/images/chart.png" /></div><span>نمودارها</span></a></li>
+</ul>
+    <div id="HomePage" class="tabcontent" style="display:inline;">
+        <nav class="navbar navbar-default tab-content-nav">
+            <div class="container-fluid" style="padding-top: 20px;padding-bottom: 10px;">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header" style="float:none;">
+                    <button  id="searchbutton" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="border:none;">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.Partial("SearchBox")
+                    <div class="nav navbar-nav navbar-right" style="padding:10px;">
+                        <div style="float:right;color:#fff;width:100%;">
+                            <ul style="padding-right: 20px;">
+                                <li style="list-style: none;display: inline-block;cursor:pointer;">
+                                    <a style="padding: 0px 5px;font-size: 14px;" href="~/">خانه</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav tab-line-ul">
+                        <li class="active tab-line-li"><a href="~/">صفحه اصلی</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav tab-line-ul">
+                        <li class="tab-line-li"><a href="~/News/1">خبرها</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav tab-line-ul">
+                        <li class="tab-line-li"><a href="~/Events/1">رویدادها</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav tab-line-ul">
+                        <li class="tab-line-li"><a href="~/Publications/1">انتشارات</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav tab-line-ul">
+                        <li class="tab-line-li"><a href="~/Downloads/1">دانلود</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav tab-line-ul">
+                        <li class="tab-line-li"><a href="~/Organizations/1">سازمان ها</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav tab-line-ul">
+                        <li class="tab-line-li"><a href="~/Charts/1">نمودارها</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-8 eightstyle" id="fourstyle">
+                    <div class="Box" style="margin:5%;">
+                        <div class="headerbox">
+                            <img src="~/Content/images/headicon.png" alt="apple" />
+                            <div class="topic">
+                                <span>تازه ترین خبرها</span>
+                            </div>
+                        </div>
+                        <div class="detailbox" style="padding-bottom: 20px;">
+                            @Html.Partial("LatestNews", Model.news as object)
+                        </div>
+                    </div>
+                    <div style="margin:5%;">
+                        @Html.Partial("ListNewsOnHomePage", Model.ListNewsOnHomePage as object)
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="leftcontentBox">
+                        <div class="Box">
+                            <div class="headerbox">
+                                <img src="~/Content/images/headicon.png" alt="apple" />
+                                <div class="topic">
+                                    <span>رویدادهای پیش رو</span>
+                                </div>
+                            </div>
+                            <div class="detailbox">
+                                @Html.Partial("LatestEvent", Model.events as object)
+                            </div>
+                            <div class="footerbox">
+                                <div class="hr"></div>
+                                <a class="more">بیشتر</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leftcontentBox">
+                        <div class="Box">
+                            <div class="headerbox">
+                                <img src="~/Content/images/headicon.png" alt="apple" />
+                                <div class="topic">
+                                    <span>تازه های نشر</span>
+                                </div>
+                            </div>
+                            <div class="detailbox">
+                                @Html.Partial("LatestPublication", Model.publications as object)
+                            </div>
+                            <div class="footerbox">
+                                <div class="hr"></div>
+                                <a class="more">بیشتر</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="Box">
+                        <div class="headerbox">
+                            <img src="~/Content/images/headicon.png" alt="apple" />
+                            <div class="topic">
+                                <span>تازه های دانلود</span>
+                            </div>
+                        </div>
+                        <div class="detailbox">
+                            @Html.Partial("LatestDownloads", Model.downloads as object)
+                        </div>
+                        <div class="footerbox">
+                            <div class="hr"></div>
+                            <a class="more">بیشتر</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="Box">
+                        <div class="headerbox">
+                            <img src="~/Content/images/headicon.png" alt="apple" />
+                            <div class="topic">
+                                <span>نمودارها</span>
+                            </div>
+                        </div>
+                        <div class="detailbox">
+                            @Html.Partial("LatestChart", Model.charts as object)
+                        </div>
+                        <div class="footerbox">
+                            <div class="hr"></div>
+                            <a class="more">بیشتر</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="Box">
+                        <div class="headerbox">
+                            <img src="~/Content/images/headicon.png" alt="apple" />
+                            <div class="topic">
+                                <span>معرفی سازمان</span>
+                            </div>
+                        </div>
+                        <div class="detailbox">
+                            @Html.Partial("LatestOrganization", Model.organizations as object)
+                        </div>
+                        <div class="footerbox">
+                            <div class="hr"></div>
+                            <a class="more">بیشتر</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @Html.Partial("Footer")
+    </div>
+
+   
+
+

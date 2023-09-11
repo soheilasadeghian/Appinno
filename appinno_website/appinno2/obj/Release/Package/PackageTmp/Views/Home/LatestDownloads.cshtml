@@ -1,0 +1,31 @@
+﻿@model List<appinno2.ClassCollection.WebServiceModels.LatestDownloadForList>
+@{
+    ViewBag.Title = "LatestDownloads";
+}
+
+@{
+    foreach (var item in Model)
+    {
+
+        //var summary = @Html.Raw(HttpUtility.HtmlDecode(item.summary));
+        @*<div>@summary</div>*@
+        @*<div>@item.image</div>*@
+        @*<div><img src="http://appinno.ir/uploads/download/images/uploaded_image_20150921134917468_524262dee1134e84a1ef5c9633267817.jpeg"/></div>*@
+        <div class="row">
+            <div class="col-sm-6">
+                <div>
+                    <span style="font-weight:bold;">@item.title</span>
+                </div>
+                <div>
+                    <a style="color:#000" target="_blank" href="/home/downloaditem/@item.ID">نمایش جزییات</a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <img src="http://appinno.ir/uploads/download/images/@item.image" class="img-responsive" style="width:150px;height:150px;padding: 15px 15px 15px 0px;" />
+            </div>
+        </div>
+
+    }
+}
+
+

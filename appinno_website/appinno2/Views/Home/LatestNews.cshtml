@@ -1,0 +1,31 @@
+﻿@model List<appinno2.ClassCollection.WebServiceModels.LatestNewsForList>
+@{
+    ViewBag.Title = "LatestNews";
+}
+
+@{
+    foreach (var item in Model)
+    {
+        var summary = @Html.Raw(HttpUtility.HtmlDecode(item.summary));
+        string SubStringHtmlSummary = appinno2.ClassCollection.SubString.SubStringHtml(summary, 0, 600);
+
+
+        <div class="col-sm-7" style="float:right;">
+            <img src="http://localhost:21457/uploads/news/images/@item.image" class="img-responsive" style="padding: 15px 15px 15px 0px;" />
+        </div>
+        <div class="col-sm-5">
+                <div class="row" style="margin-right:0px;margin-left:0px;">
+                    <span style="font-weight:bold;">@item.title</span>
+                </div>
+            <br />
+                <div class="row" style="margin-right:0px;margin-left:0px;">
+                    <span style="color:#ff6c00;">@item.publishDate</span>
+                </div>
+            <div class="row" style="margin-right:0px;margin-left:0px;text-align:justify;">
+                <span>@SubStringHtmlSummary</span>
+            </div>
+        </div>
+    }
+}
+
+

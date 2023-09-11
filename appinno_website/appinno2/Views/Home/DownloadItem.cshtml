@@ -1,0 +1,24 @@
+﻿@model appinno2.ClassCollection.WebServiceModels.DownloadResult
+@{
+    ViewBag.Title = "DownloadItem";
+}
+
+@{
+    if (Model.result.code == 0)
+    {
+        foreach (var item in Model.download.contents)
+        {
+            <div class="row">
+                <div class="col-sm-6">@item.type</div>
+                <div class="col-sm-6">@item.fileSize</div>
+            </div>
+
+        }
+    }
+    else
+    {
+        <span>error : @Model.result.message</span>
+    }
+}
+
+

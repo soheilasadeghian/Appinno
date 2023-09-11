@@ -1,0 +1,29 @@
+﻿@model List<appinno2.ClassCollection.WebServiceModels.LatestIoForList>
+@{
+    ViewBag.Title = "LatestOrganization";
+}
+
+@{
+    foreach (var item in Model)
+    {
+        var summary = @Html.Raw(HttpUtility.HtmlDecode(item.summary));
+        string SubStringHtmlSummary = appinno2.ClassCollection.SubString.SubStringHtml(summary, 0, 180);
+
+         <div class="">
+            <div class="col-sm-6">
+                <div>
+                    <span style="font-weight:bold;">@item.title</span>
+                </div>
+                <div>
+                    <p style="text-align: justify;">@SubStringHtmlSummary</p>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <img src="http://appinno.ir/uploads/io/images/@item.image" class="img-responsive" style="width:150px;height:150px;padding: 15px 15px 15px 0px;" />
+            </div>
+        </div>
+
+    }
+}
+
+

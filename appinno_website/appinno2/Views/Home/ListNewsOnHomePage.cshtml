@@ -1,0 +1,27 @@
+﻿@model List<appinno2.ClassCollection.WebServiceModels.LatestNewsForList>
+@{
+    ViewBag.Title = "ListNewsOnHomePage";
+}
+
+@{
+    int count = 0;
+    foreach (var item in Model)
+    {
+        count++;
+        if (count % 2 == 0)
+        {
+            <div style="width: 100%;background-color: #d6d6d6;padding-right: 20px;">
+                <a style="color:#000;line-height: 25px;">@item.title</a>
+                <a style="color:#ff6c00;line-height: 25px;"> - @item.publishDate</a> 
+            </div>
+        }
+        else {
+            <div style="width: 100%;background-color: #fff;padding-right: 20px;">
+                <a style="color:#000;line-height: 25px;">@item.title</a>
+                <a style="color:#ff6c00;line-height: 25px;"> - @item.publishDate</a> 
+            </div>
+        }
+        }
+}
+
+

@@ -1,0 +1,164 @@
+C:\soheila_project\appinno\appinno2\bin\ApplicationInsights.config
+C:\soheila_project\appinno\appinno2\bin\roslyn\csc.exe
+C:\soheila_project\appinno\appinno2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\soheila_project\appinno\appinno2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\soheila_project\appinno\appinno2\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\soheila_project\appinno\appinno2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\soheila_project\appinno\appinno2\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\soheila_project\appinno\appinno2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\soheila_project\appinno\appinno2\bin\roslyn\System.Collections.Immutable.dll
+C:\soheila_project\appinno\appinno2\bin\roslyn\System.Reflection.Metadata.dll
+C:\soheila_project\appinno\appinno2\bin\roslyn\vbc.exe
+C:\soheila_project\appinno\appinno2\bin\roslyn\VBCSCompiler.exe
+C:\soheila_project\appinno\appinno2\bin\roslyn\VBCSCompiler.exe.config
+C:\soheila_project\appinno\appinno2\bin\appinno2.dll.config
+C:\soheila_project\appinno\appinno2\bin\appinno2.dll
+C:\soheila_project\appinno\appinno2\bin\appinno2.pdb
+C:\soheila_project\appinno\appinno2\bin\Antlr3.Runtime.dll
+C:\soheila_project\appinno\appinno2\bin\EntityFramework.dll
+C:\soheila_project\appinno\appinno2\bin\EntityFramework.SqlServer.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.AI.Agent.Intercept.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.AI.DependencyCollector.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.AI.Web.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.AI.WindowsServer.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.ApplicationInsights.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.AspNet.Identity.Core.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.Security.Cookies.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.Security.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.Security.Facebook.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.Security.Google.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.Security.OAuth.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.Security.Twitter.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Web.Infrastructure.dll
+C:\soheila_project\appinno\appinno2\bin\Newtonsoft.Json.dll
+C:\soheila_project\appinno\appinno2\bin\Owin.dll
+C:\soheila_project\appinno\appinno2\bin\System.Web.Helpers.dll
+C:\soheila_project\appinno\appinno2\bin\System.Web.Mvc.dll
+C:\soheila_project\appinno\appinno2\bin\System.Web.Optimization.dll
+C:\soheila_project\appinno\appinno2\bin\System.Web.Razor.dll
+C:\soheila_project\appinno\appinno2\bin\System.Web.WebPages.Deployment.dll
+C:\soheila_project\appinno\appinno2\bin\System.Web.WebPages.dll
+C:\soheila_project\appinno\appinno2\bin\System.Web.WebPages.Razor.dll
+C:\soheila_project\appinno\appinno2\bin\WebGrease.dll
+C:\soheila_project\appinno\appinno2\bin\Microsoft.AI.DependencyCollector.xml
+C:\soheila_project\appinno\appinno2\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\soheila_project\appinno\appinno2\bin\Microsoft.AI.Web.xml
+C:\soheila_project\appinno\appinno2\bin\Microsoft.AI.WindowsServer.xml
+C:\soheila_project\appinno\appinno2\bin\Microsoft.ApplicationInsights.xml
+C:\soheila_project\appinno\appinno2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\soheila_project\appinno\appinno2\bin\System.Web.Helpers.xml
+C:\soheila_project\appinno\appinno2\bin\System.Web.Mvc.xml
+C:\soheila_project\appinno\appinno2\bin\System.Web.Optimization.xml
+C:\soheila_project\appinno\appinno2\bin\System.Web.Razor.xml
+C:\soheila_project\appinno\appinno2\bin\System.Web.WebPages.xml
+C:\soheila_project\appinno\appinno2\bin\System.Web.WebPages.Deployment.xml
+C:\soheila_project\appinno\appinno2\bin\System.Web.WebPages.Razor.xml
+C:\soheila_project\appinno\appinno2\bin\Antlr3.Runtime.pdb
+C:\soheila_project\appinno\appinno2\bin\Newtonsoft.Json.xml
+C:\soheila_project\appinno\appinno2\bin\EntityFramework.xml
+C:\soheila_project\appinno\appinno2\bin\EntityFramework.SqlServer.xml
+C:\soheila_project\appinno\appinno2\bin\Microsoft.AspNet.Identity.Core.xml
+C:\soheila_project\appinno\appinno2\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\soheila_project\appinno\appinno2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.xml
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.Security.xml
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.Security.Facebook.xml
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.Security.Cookies.xml
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.Security.OAuth.xml
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.Security.Google.xml
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.Security.Twitter.xml
+C:\soheila_project\appinno\appinno2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\soheila_project\appinno\appinno2\obj\Release\appinno2.csprojResolveAssemblyReference.cache
+C:\soheila_project\appinno\appinno2\obj\Release\appinno2.dll
+C:\soheila_project\appinno\appinno2\obj\Release\appinno2.pdb
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\ApplicationInsights.config
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\roslyn\csc.exe
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\roslyn\System.Collections.Immutable.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\roslyn\System.Reflection.Metadata.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\roslyn\vbc.exe
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\roslyn\VBCSCompiler.exe
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\roslyn\VBCSCompiler.exe.config
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\appinno2.dll.config
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\appinno2.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\appinno2.pdb
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Antlr3.Runtime.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\EntityFramework.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\EntityFramework.SqlServer.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.AI.Agent.Intercept.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.AI.DependencyCollector.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.AI.Web.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.AI.WindowsServer.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.ApplicationInsights.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.AspNet.Identity.Core.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.Security.Cookies.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.Security.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.Security.Facebook.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.Security.Google.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.Security.OAuth.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.Security.Twitter.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Web.Infrastructure.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Newtonsoft.Json.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Owin.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\System.Web.Helpers.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\System.Web.Mvc.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\System.Web.Optimization.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\System.Web.Razor.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\System.Web.WebPages.Deployment.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\System.Web.WebPages.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\System.Web.WebPages.Razor.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\WebGrease.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.AI.DependencyCollector.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.AI.Web.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.AI.WindowsServer.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.ApplicationInsights.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\System.Web.Helpers.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\System.Web.Mvc.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\System.Web.Optimization.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\System.Web.Razor.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\System.Web.WebPages.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\System.Web.WebPages.Deployment.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\System.Web.WebPages.Razor.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Antlr3.Runtime.pdb
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Newtonsoft.Json.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\EntityFramework.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\EntityFramework.SqlServer.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.AspNet.Identity.Core.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.Security.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.Security.Facebook.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.Security.Cookies.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.Security.OAuth.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.Security.Google.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.Security.Twitter.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\obj\Release\appinno2.csprojResolveAssemblyReference.cache
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\obj\Release\appinno2.dll
+C:\soheila_project\WebSiteAppino\appinno950629_چک نمودن کد result 0 یا 1\appinno2\obj\Release\appinno2.pdb

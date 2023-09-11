@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>@*soheila add for error js:uncaught referenceerror function is not defined*@
+    <script src="~/Scripts/jquery.bootpag.js"></script>
+    <script src="~/Scripts/jquery.bootpag.min.js"></script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    @Html.Partial("_LoginPartial")
+    <div class="navbar navbar-inverse navbar-fixed-top headernav">
+        <div class="divinheadernav">
+                <div class="leftpic">
+                    <img src="~/Content/images/lamp.png" alt="lamp" class="img-responsive" />
+                </div>
+                <div class="rightpic">
+                    <img src="~/Content/images/HamraheAval.png" alt="lamp" class="img-responsive rightimg" />
+                </div>
+        </div>
+    </div>
+    <div class="body-content" style="position:relative;margin-bottom: -50px;margin-top: -50px;">
+        <div>
+            @RenderBody()
+            <script>
+        var previous_window_width = $(window).width();
+        //با تغيير سايز صفحه باكس سرچ به حالت اوليه برميگردد. به دلیل مشکل در ریسپانسیو در ie
+        $(window).resize(function () {
+            if (browser() == "IE") {
+                if ($(window).width() <= 767 && previous_window_width > 767) {
+                    document.getElementById("fourstyle").style.cssFloat = "none";
+                }
+                else if ($(window).width() > 767 && previous_window_width <= 767) {
+                    document.getElementById("fourstyle").style.cssFloat = "left";
+                }
+
+                if ($(window).width() <= 767 && previous_window_width < 767) {
+                    document.getElementById("fourstyle").style.cssFloat = "none";
+                }
+                else if ($(window).width() > 767 && previous_window_width >= 767) {
+                    document.getElementById("fourstyle").style.cssFloat = "left";
+                }
+            }
+            function browser() {
+                if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1) {
+                    return "Opera";
+                }
+                else if (navigator.userAgent.indexOf("Chrome") != -1) {
+                    return 'Chrome'
+                }
+                else if (navigator.userAgent.indexOf("Safari") != -1) {
+                    return 'Safari'
+                }
+                else if (navigator.userAgent.indexOf("Firefox") != -1) {
+                    return 'Firefox'
+                }
+                else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) //IF IE > 10
+                {
+                    return 'IE'
+                }
+                else {
+                    return 'unknown'
+                }
+            }
+        });
+
+        // به دلیل مشکل برعکس بودن راست و چپ زیر content در IE
+        $(document).ready(function () {
+        if (browser() == "IE") {
+            if ($(window).width() <= 767 ) {
+                document.getElementById("fourstyle").style.cssFloat = "none";
+                document.getElementById("searchbutton").style.cssFloat = "left";
+                document.getElementById("searchbox").style.cssFloat = "right";
+
+            }
+            else if ($(window).width() > 767) {
+                document.getElementById("fourstyle").style.cssFloat = "left";
+            }
+        }
+        function browser() {
+            if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1) {
+                return "Opera";
+            }
+            else if (navigator.userAgent.indexOf("Chrome") != -1) {
+                return 'Chrome'
+            }
+            else if (navigator.userAgent.indexOf("Safari") != -1) {
+                return 'Safari'
+            }
+            else if (navigator.userAgent.indexOf("Firefox") != -1) {
+                return 'Firefox'
+            }
+            else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) //IF IE > 10
+            {
+                return 'IE'
+            }
+            else {
+                return 'unknown'
+            }
+        }
+        });
+            </script>
+        </div>
+    </div>
+    <div class="container-fluid" style="border-top-right-radius: 10px;border-top-left-radius: 10px;height: 250px;background-image:url('../Content/images/footer.png');margin-right:5%;margin-left:5%;">
+        <div class="row" style="width: 100%;margin:0px;">
+            <div class="col-sm-6" style="padding-top: 65px;">
+                <div style="margin: auto;width: 130px;height: 50px;">
+                    <a style="margin: auto;width: 130px;height: 50px;cursor: pointer;">
+                        <img src="~/Content/images/apple.png" alt="apple" class="img-responsive"  style="margin:auto;"/>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6" style="padding-top: 65px;">
+                <div style="margin: auto;width: 130px;height: 50px;cursor: pointer;">
+                    <a style="margin: auto;width: 130px;height: 50px;cursor: pointer;">
+                        <img src="~/Content/images/android.png" alt="android" class="img-responsive"  style="margin:auto;" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

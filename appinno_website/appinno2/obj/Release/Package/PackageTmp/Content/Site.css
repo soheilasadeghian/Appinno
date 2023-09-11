@@ -1,0 +1,494 @@
+﻿/**{
+    border:0px;
+    border:0;
+    margin:0px;
+    margin:0;
+    padding:0px;
+    padding:0;
+    outline:none;
+}*/
+body {
+  background: -webkit-linear-gradient(left top, #757575, #bebebe); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #757575, #bebebe); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #757575, #bebebe); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #757575, #bebebe); /* Standard syntax */
+}
+
+
+@font-face {
+   font-family: BYekan;
+   src: url(../fonts/BYekan.eot?#iefix);
+   src: url(../fonts/BYekan.woff);
+   src: url(../fonts/BYekan.ttf);
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    /*margin-top:300px;*/
+    margin-right:10%;
+    margin-left:10%;
+}
+
+@media (max-width: 768px){
+    .body-content {
+    /*margin-top:250px;*/
+}
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+
+
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*border: 1px solid #ccc;*/
+    /*background-color: #f1f1f1;*/
+    float:right;
+    margin-top: -53px;
+    width: 100%;
+}
+
+@media(max-width:300px){
+ul.tab {
+    margin-top: -43px;
+}
+}
+
+/* Float the list items side by side */
+ul.tab li {
+    float: right;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom: none;
+    margin-left: 5px;
+    width: 11%;
+    margin-top:1px;
+}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    padding: 1px 8px; /*soheila  14px 16px*/
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+    background-color: #a1a1a1;
+    width: 100%;
+}
+
+   .active{
+    background-color: #21b5d3 !important;
+}
+
+
+
+/* Change background color of links on hover */
+ul.tab li a:hover {
+    background-color: #a1a1a1;
+}
+
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+    background-color: #21b5d3;
+}
+
+/* Style the tab content */
+.tabcontent {
+    direction:rtl;
+    display: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #21b5d3;
+    border-top: none;
+}
+.tabcontent .header{
+    height: 110px;
+    background-color:#21b5d3;
+    border-top-left-radius: 10px;
+}
+.tabcontent .content{
+    background-color:#d6d6d6;
+}
+.tabcontent .footer{
+    /*height:40px;*/
+    background-color:#f26522;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.tabicon {
+    font-size:24px;
+    width:100%;
+    padding-top:3px;
+}
+
+@media (max-width: 400px) {
+.tabicon {
+    font-size:16px;
+}
+}
+
+
+
+.topcontent {
+    height:66%;
+    width: 100%;
+    display: table;
+}
+
+.rightcontent {
+    width: 66%;
+    float: left;
+    height: 100%;
+}
+
+.bottomcontentBox {
+    width:33.3%;
+    float:left;
+}
+
+.leftcontentBox{
+    width:100%;
+    height:50%;
+}
+
+.Box {
+    min-height: 250px;
+    background-color: #fff;
+    margin:10%;
+    box-shadow: 2px 3px 5px gray;
+    position:relative;
+}
+.Box > div.headerbox{
+    width: 160px;
+    right: -5px;
+    top: -5px;
+    position: relative;
+    height: 40px;
+    background-color: #ff6c00;
+}
+.Box > div.detailbox{
+height:75%;
+overflow:hidden;
+}
+.Box > div.footerbox{
+height:30px;
+position:relative;
+}
+.Box > div > img{
+    float: right;
+    padding: 6px;
+}
+.Box > div > div.topic{
+    box-shadow: 3px 0px 5px gray;
+    padding: 10px 35px 10px 0px;
+    color: #fff;
+}
+.Box > div > div > span{
+    font-size: 14px;
+}
+a.more {
+    color:#6bcee2;
+    padding-left:15px;
+    cursor: pointer;
+    position:absolute;
+    left:10px;
+    bottom:10px;
+}
+.Box div.hr {
+    border-bottom: 1px dashed #6bcee2;
+    position: absolute;
+    bottom: 30px;
+    left: 15px;
+    right: 15px;
+}
+.loginul {
+    background-color:#21b5d3;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 0px;
+}
+
+
+.navbar-nav > li {
+    float: right;
+}
+@media (max-width: 500px) {
+    .loginul > li.width {
+        width:250px;
+    }
+}
+@media(min-width: 560px) and (max-width: 768px) {
+    .loginul {
+        margin-right:10%;
+        /*margin-left:10%;*/
+        float:right;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .loginul  {
+    margin-right: 9% !important;
+    float:none;
+    }
+}
+
+.leftpic{
+    float: left;
+    position: relative;
+}
+@media (max-width: 768px){
+.leftpic{
+    display:none;
+}
+}
+.rightpic{
+    position: absolute;
+    right: 20px;
+    z-index: 1;
+    bottom:0px;
+}
+@media (max-width: 768px) and (min-width: 500px){
+.rightpic{
+    bottom:17px;
+}
+}
+@media (max-width: 768px){
+.rightpic{
+    bottom:17px;
+    right:0px;
+}
+}
+
+.androidbutton {
+max-width: 20%;
+margin: auto;
+float:left;
+margin-left:10%;
+}
+
+.applebutton {
+max-width: 20%;
+margin: auto;
+float:right;
+margin-right:10%;
+}
+
+@media (max-width: 768px){
+.androidbutton {
+float:none;
+margin-left:auto;
+}
+
+.applebutton {
+float:none;
+margin-right: auto;
+}
+}
+
+
+
+
+@media (max-width: 450px) {
+    ul.tab li a span {
+    font-size:0px;
+    position:absolute;
+}
+    ul.tab li a {
+    padding: 11px 8px;
+    }
+}
+
+@media (max-width: 400px) and  (min-width: 300px)  {
+    ul.tab li a {
+    padding: 15px 8px;
+    }
+}
+
+@media (max-width: 300px) {
+    ul.tab li a {
+    padding: 10px 0px;
+    }
+}
+
+.imgtab{
+    width:30px;
+    height:31px;
+}
+
+
+@media (max-width: 400px) {
+.imgtab{
+    width:20px;
+    margin-left:-2px;
+    height:23px;
+}
+}
+
+.search{
+    font-size:inherit;
+    float: left;
+    padding: 40px 30px 10px 50px;
+}
+
+@media (max-width: 400px) {
+.search{
+    font-size:inherit;
+    padding: 10px 5px 5px 10px;
+}
+}
+.width{
+    float:right;
+}
+
+.eightstyle{
+    float:right;
+}
+@media (max-width: 768px) {
+.eightstyle{
+     float:none;
+}
+}
+
+@media (max-width: 768px) {
+    .morethan768 {
+        display:none;
+    }
+    .lessthan768 {
+        display:block;
+    }
+}
+@media (min-width: 768px) {
+    .morethan768 {
+        display:block;
+    }
+    .lessthan768 {
+        display:none;
+    }
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{
+    background-color:#1bafcd;
+    border-bottom-left-radius:4px;
+    border-bottom-right-radius:4px;
+    border:none;
+}
+.headernav{
+    height:350px;
+    margin-top: -52px;
+    position: relative;
+    z-index: -1;
+    background-color: #fff;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left:5%;
+    margin-right:5%;
+}
+.divinheadernav{
+    position: relative;
+    height:250px;
+}
+@media (max-width: 768px) and  (min-width: 350px){
+.headernav{
+    height:250px;
+}
+}
+@media (max-width: 350px) {
+.headernav{
+    height:200px;
+}
+.headernav .divinheadernav{
+    height:200px;
+}
+}
+.tab-content-nav{
+    background-color: #21b5d3;
+    margin-bottom:0px;
+    border:none;
+    border-top-left-radius: 8px;
+}
+
+@media (max-width: 768px) {
+.tab-content-nav{
+    border-top-right-radius:8px;
+}
+}
+@media (min-width: 768px) {
+#bs-example-navbar-collapse-1{
+    display:none;
+}
+}
+input{
+    direction:rtl;
+}
+
+#logintoggle{
+    margin: 0px;
+    padding: 13px 8px;
+    border: none;
+}
+@media (max-width: 320px) {
+#logintoggle{
+    padding:5px;
+}
+}
+.rightimg{
+    float:right;
+    width:100%;
+}
+.tab-line-ul{
+    margin: 0px;
+    padding: 0px 25px;
+}
+.tab-line-li{
+    width: 100%;
+    text-align: center;
+}
+.pagination > li{
+    float:right;
+}
+.pagination {
+    padding:0px;
+}
+.roweven{
+    width: 100%;
+    background-color: #d6d6d6;
+    margin:0px;
+    border: 2px solid #fff;
+}
+.rowodd{
+    width: 100%;
+    background-color: #fff;
+    margin:0px;
+}
+.contentlist{
+    margin:5% 5% 1% 5%;
+}
+.summary h2{
+    font-size: 18px;
+}
+.contentsingle{
+    margin:5%;
+}

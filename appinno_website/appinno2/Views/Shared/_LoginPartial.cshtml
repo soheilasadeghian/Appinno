@@ -1,0 +1,49 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+    @Html.AntiForgeryToken()
+
+    <ul class="nav navbar-nav navbar-right loginul">
+        <li>
+            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+        </li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+    </ul>
+    }
+}
+else
+{
+        <div class="navbar-header" style="z-index: 1;float: right;left: 5%;position:absolute;top: 0px;background-color: #21b5d3;border-bottom-left-radius: 8px;border-bottom-right-radius: 8px;margin-top: -1px;">
+            <div type="button" id="logintoggle" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-user" style="color:#fff;"></span>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2" style="border: none;margin-top: -1px;">
+            <ul class="nav navbar-nav navbar-right loginul">
+                <li>
+                    <div class="user fa fa-user-plus"></div>
+                    <div class="register">
+                        @Html.ActionLink("ثبت نام", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
+                    </div>
+                </li>
+                <li class="width">
+                    <div class="wrap">
+                        <div class="email">
+                            <input id="email" type="text" name="email" value="" placeholder="نام کاربری">
+                            <div class="tile mci-2b fa fa-envelope-o"></div>
+                        </div>
+                        <div class="password">
+                            <input id="password" type="password" name="password" value="" placeholder="کلمه عبور">
+                            <div class="tile mci-2b fa fa-lock"></div>
+                        </div>
+
+                        <input id="submit" class="button mci-1-1b" type="button" name="submit" value="ورود" style="font-size:12px;">
+                        <div class="clear"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+}

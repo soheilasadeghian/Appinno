@@ -1,0 +1,144 @@
+﻿@model appinno2.Models.Organization
+@{
+    ViewBag.Title = "OrganizationsFilterTag";
+}
+
+@{
+    <ul class="tab morethan768">
+        <li><a href="~/" class="tablinks" @*onclick="openCity(event, 'HomePage')"*@ id="first"><div class="tabicon fa fa-home"></div><span>خانه</span></a></li>
+        <li><a href="~/News/1" class="tablinks"><div class="tabicon fa fa-newspaper-o"></div><span>خبرها</span></a></li>
+        <li><a href="~/Events/1" class="tablinks"><div class="tabicon fa fa-calendar"></div><span>رویدادها</span></a></li>
+        <li><a href="~/Publications/1" class="tablinks"><div><img class="imgtab" src="~/Content/images/publisher.png" /></div><span>انتشارات</span></a></li>
+        <li><a href="~/Downloads/1" class="tablinks"><div class="tabicon fa fa-download"></div><span>دانلود</span></a></li>
+        <li><a href="~/Organizations/1" class="tablinks active"><div class="tabicon fa fa-sitemap"></div><span>سازمانها</span></a></li>
+        <li><a href="~/Charts/1" class="tablinks"><div><img class="imgtab" src="~/Content/images/chart.png" /></div><span>نمودارها</span></a></li>
+    </ul>
+
+    int count = 0;
+    <div id="Organizations" class="tabcontent" style="display:inline;">
+        <nav class="navbar navbar-default tab-content-nav">
+            <div class="container-fluid" style="padding-top: 20px;padding-bottom: 10px;">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header" style="float:none;">
+                    <button id="searchbutton" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="border:none;">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.Partial("SearchBox")
+                    <div class="nav navbar-nav navbar-right" style="padding:10px;">
+                        <div style="float:right;color:#fff;width:100%;">
+                            <ul style="padding-right: 20px;">
+                                <li style="list-style: none;display: inline-block;cursor:pointer;">
+                                    <a style="padding: 0px 5px;font-size: 14px;" href="~/">خانه</a>
+                                    <span>></span>
+                                </li>
+
+                                <li style="list-style: none;display: inline-block;cursor:pointer;">
+                                    <a style="padding: 0px 5px;font-size: 14px;" href="~/Organizations/1">لیست سازمان ها</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav tab-line-ul">
+                        <li class="tab-line-li"><a href="~/">صفحه اصلی</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav tab-line-ul">
+                        <li class="tab-line-li"><a href="~/News/1">خبرها</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav tab-line-ul">
+                        <li class="tab-line-li"><a href="~/Events/1">رویدادها</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav tab-line-ul">
+                        <li class="tab-line-li"><a href="~/Publications/1">انتشارات</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav tab-line-ul">
+                        <li class="tab-line-li"><a href="~/Downloads/1">دانلود</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav tab-line-ul">
+                        <li class="active tab-line-li"><a href="~/Organizations/1">سازمان ها</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav tab-line-ul">
+                        <li class="tab-line-li"><a href="~/Charts/1">نمودارها</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse --><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-12 eightstyle" id="fourstyle">
+                    <div class="contentlist">
+                        @foreach (var item in Model.Organizations)
+                        {
+                            count++;
+                            string alternativeRow = "";
+                            if (count % 2 == 0)
+                            {
+                                alternativeRow = "roweven";
+                            }
+                            else
+                            {
+                                alternativeRow = "rowodd";
+                            }
+                            var summary = @Html.Raw(HttpUtility.HtmlDecode(item.summary));
+                            string SubStringHtmlSummary = appinno2.ClassCollection.SubString.SubStringHtml(summary, 0, 300);
+                            <div class="row @alternativeRow">
+                                <div class="col-sm-4" style="float:right;">
+                                    <a href="~/OrganizationDetail/@item.ID">
+                                        <img src="http://appinno.ir/uploads/io/images/@item.image" class="img-responsive" style="padding: 15px;" />
+                                    </a>
+                                </div>
+                                <div class="col-sm-8" style="padding: 15px;">
+                                    <div class="row" style="margin-right:0px;margin-left:0px;">
+                                        <span style="font-weight:bold;font-size: 18px;">@item.title</span>
+                                    </div>
+                                    <br />
+                                    <div class="row" style="margin-right:0px;margin-left:0px;text-align:justify;">
+                                        <span>@SubStringHtmlSummary</span>
+                                    </div>
+                                    <br />
+                                    <div class="row" style="margin-right:0px;margin-left:0px;">
+                                        <span style="color:#ff6c00;float:left;">@item.publishDate</span>
+                                        <span class="fa fa-thumbs-up" style="color:#5fba7d;float:right;">&nbsp;@item.like&nbsp;&nbsp;</span>
+                                        <span class="fa fa-thumbs-down" style="color:orangered;float:right;">&nbsp;@item.unlike&nbsp;&nbsp;</span>
+                                        <br />
+                                        @foreach (var tags in item.tag)
+                                        {
+                                            <a style="color:#428bca;float:right;" href="~/OrganizationsFilterTag/@tags.ID/1">#@tags.title&nbsp;&nbsp;</a>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <div class="row" style="width: 100%;margin:0px;">
+                            <p class="demo demoorganizations" style="text-align:center;">
+                            </p>
+                        </div>
+                        <script>
+                            $('.demoorganizations').bootpag({
+                                href: "/OrganizationsFilterTag/@Model.tagID/{{number}}",
+                                total: 23,
+                                page: @Model.pagenumber,
+                                maxVisible: 10
+                            }).on('page', function (event, num) {
+                                $(".content2").html("Page " + num); // or some ajax content loading...
+                            });
+                        </script>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        @Html.Partial("Footer")
+    </div>
+}
+
+

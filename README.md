@@ -10,10 +10,10 @@ News website with admin panel.(Website & WebService(SOAP) With DB)
 ## Overview
 This repository (Appinno) includes two projects:
 
-✔️ Appinno Website project as a client in root of repository(Appinno Folder)
+✔️ Appinno Website project as a client in root of repository(appinno_website Folder)
     The project Appinno Website” is a responsive website made with ASP.NET Web Forms Technology using C#, Bootstrap, JQuery, Ajax, HTML, CSS, JavaScript, SQL, and EntityFramework.
 
-✔️ Web Service project with Admin Panel in root of repository(hamidiabetWebApi Folder)
+✔️ Web Service project with Admin Panel in root of repository(appinno_panel_webservice Folder)
     Appinno is a Web Service(SOAP) shows how to implement Web Services with C#, .Net Framework 4.5
 
 ## Tools Used 🛠️
@@ -21,7 +21,7 @@ This repository (Appinno) includes two projects:
 *  ASP.NET Web Forms, WebService(SOAP), .Net Framework 4.5, C#, SQL, HTML, CSS, JavaScript, Bootstrap, JQuery, Ajax
 
 ## Installation Steps 📦 
-1. Restore DB in SQL Server from the DB file in root of repository <br/>
+1. Restore DB in SQL Server from the DB file in root of repository (AppInnonew.bak.sql)<br/>
 2. Open Web Service Solution in Visual Studio and build the project <br/>
 3. Execute (F5) to run. Browser will show Homepage of website panel.(the picture of homepage is end of this readme) user:sa,pass:sa<br/>
 4. Open Appinno Website Solution in Visual Studio and build the project <br/>
@@ -35,7 +35,7 @@ This repository (Appinno) includes two projects:
 
 
 Appinno Website:\\
-![alt text](https://github.com/soheilasadeghian/Appinno/blob/main/image/screenshot_appinno.png?raw=true)
+![alt text](https://github.com/soheilasadeghian/Appinno/blob/main/screenshot.png)
 
 
 ## Support

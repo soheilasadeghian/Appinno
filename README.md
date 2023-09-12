@@ -1,5 +1,5 @@
 # Appinno 🔥
-News website with admin panel.(Website & WebService(SOAP) With DB)
+News website with admin panel (Website & WebService(SOAP) With DB)
 
 :star: Star me on GitHub — it helps!
 
@@ -10,14 +10,14 @@ News website with admin panel.(Website & WebService(SOAP) With DB)
 ## Overview
 This repository (Appinno) includes two projects:
 
-✔️ Appinno Website project as a client in root of repository(appinno_website Folder)
-    website includes modules like News, Events, Publications, Downloads, Organizations and Charts.
-    "Appinno Website" is a website made with ASP.NET Web Forms Technology using C#, SQL, Bootstrap, JQuery, Ajax, HTML, CSS, JavaScript, and EntityFramework.
+✔️ Appinno Website project as a client in root of repository(appinno_website Folder)\
+    website includes modules like News, Events, Publications, Downloads, Organizations and Charts.\
+    "Appinno Website" is a website made with ASP.NET Web Forms Technology using C#, SQL, Bootstrap, JQuery, Ajax, HTML, CSS, JavaScript, and EntityFramework.\
     this project use Web Service for read operation as client.
 
-✔️ Web Service project with Admin Panel in root of repository(appinno_panel_webservice Folder)
-    Admin Panel use Web Service for CRUD operations.
-    this project is a Web Service(SOAP) shows how to implement Web Services with C#, .Net Framework 4.5.
+✔️ Web Service project with Admin Panel in root of repository(appinno_panel_webservice Folder)\
+    Admin Panel use Web Service for CRUD operations.\
+    this project is a Web Service(SOAP) shows how to implement Web Services with C#, .Net Framework 4.5.\
     website and panel use web service as client.
 
 ## Tools Used 🛠️
@@ -31,6 +31,26 @@ This repository (Appinno) includes two projects:
 4. Open Appinno Website Solution in Visual Studio and build the project <br/>
 3. Execute (F5) to run. Browser will show Homepage of website.(the picture of homepage is end of this readme)<br/>
 
+## List of some requests in webservice files:
+
+ ### User service [asmx file](https://github.com/soheilasadeghian/Appinno/blob/main/appinno_panel_webservice/AppinnoNew/service/userservice.asmx.cs)
+getAllEvents,getAllMessage,getBestIdeaCompetition,getChart,getChartCommentList,getCreativityCompetition,getDaysWithEvent,getDownload,getDownloadCommentList,getEventCommentList,getEvents,getEventsInMonthForList,getIcan,getIcanCommentList,getIdea,getIo,getIoCommentList,getLatestBestIdeaCompetitionForList,getLatestChartForList,getLatestCreativityCompetitionForList,getLatestDownloadForList,getLatestDownloadForNotification,getLatestEventsForList,getLatestEventsForNotification,getLatestIcanForList,getLatestIcanForNotification,getLatestIdeaOfBestIdeaCompetitionForList,getLatestIoForList,getLatestIoForNotification,getLatestMyIranCompetitionForList,getLatestNewsForList,getLatestNewsForNotification,getLatestPubForList,getLatestPubForNotification,getNews,getNewsCommentList,getPartnerForList,getPolicy,getPoll,getPollList,getPollResult,getPub,getPublicationCommentList,getSingleDownload,getSingleEvents,getSingleIcan,getSingleIo,getSingleNews,getSinglePub,getTagList
+
+deleteDownloadContent,deleteEventContent,deleteIOContent,deleteIcanContent,deleteIdea,deleteIdeaContent,deleteNewsContent,deletePublicationContent,deleteReportContent
+
+editDownload,editDownloadContent,editEvent,editEventContent,editIO,editIOContent,editIcan,editIcanContent,editIdea,editIdeaContent,editNews,editNewsContent,editPublication,editPublicationContent,editReport,editReportContent
+
+isExistUser,likeUnlikeDownload,likeUnlikeEvents,likeUnlikeIo,likeUnlikeNews,likeUnlikePub
+
+registerAnswer,registerAnswerContent,registerDownloadContent,registerEvent,registerEventContent,registerIO,registerIOContent,registerIcan,registerIcanContent,registerIdea,registerIdeaContent,registerNews,registerNewsContent,registerPublication,registerPublicationContent,registerReport,registerReportContent,registerResponse,registerResponseContent,registerUser,registermessage,registertag
+
+resetPassword,sendChartComment,sendDownloadComment,sendEventComment,sendIcanComment,sendIoComment,sendNewsComment,sendPubComment,sendValidationCode
+ 
+ ### Upload service [asmx file](https://github.com/soheilasadeghian/Appinno/blob/main/appinno_panel_webservice/AppinnoNew/service/uploadService.asmx.cs)
+UploadFile,uploadPacket,uploadRequest
+
+ ### Push service [asmx file](https://github.com/soheilasadeghian/Appinno/blob/main/appinno_panel_webservice/AppinnoNew/service/pushservice.asmx.cs)
+sendPush,sendPushTo,setPushInfo
 
 - **call Method to web service:**
 ```c#
@@ -53,27 +73,6 @@ This repository (Appinno) includes two projects:
     return json;
 }
 ```
-
-## List of some requests in webservice files:
-
- ### User service [asmx file](https://github.com/soheilasadeghian/Appinno/blob/main/appinno_panel_webservice/AppinnoNew/service/userservice.asmx.cs)
-getAllEvents,getAllMessage,getBestIdeaCompetition,getChart,getChartCommentList,getCreativityCompetition,getDaysWithEvent,getDownload,getDownloadCommentList,getEventCommentList,getEvents,getEventsInMonthForList,getIcan,getIcanCommentList,getIdea,getIo,getIoCommentList,getLatestBestIdeaCompetitionForList,getLatestChartForList,getLatestCreativityCompetitionForList,getLatestDownloadForList,getLatestDownloadForNotification,getLatestEventsForList,getLatestEventsForNotification,getLatestIcanForList,getLatestIcanForNotification,getLatestIdeaOfBestIdeaCompetitionForList,getLatestIoForList,getLatestIoForNotification,getLatestMyIranCompetitionForList,getLatestNewsForList,getLatestNewsForNotification,getLatestPubForList,getLatestPubForNotification,getNews,getNewsCommentList,getPartnerForList,getPolicy,getPoll,getPollList,getPollResult,getPub,getPublicationCommentList,getSingleDownload,getSingleEvents,getSingleIcan,getSingleIo,getSingleNews,getSinglePub,getTagList
-
-deleteDownloadContent,deleteEventContent,deleteIOContent,deleteIcanContent,deleteIdea,deleteIdeaContent,deleteNewsContent,deletePublicationContent,deleteReportContent,
-
-editDownload,editDownloadContent,editEvent,editEventContent,editIO,editIOContent,editIcan,editIcanContent,editIdea,editIdeaContent,editNews,editNewsContent,editPublication,editPublicationContent,editReport,editReportContent
-
-isExistUser,likeUnlikeDownload,likeUnlikeEvents,likeUnlikeIo,likeUnlikeNews,likeUnlikePub
-
-registerAnswer,registerAnswerContent,registerDownloadContent,registerEvent,registerEventContent,registerIO,registerIOContent,registerIcan,registerIcanContent,registerIdea,registerIdeaContent,registerNews,registerNewsContent,registerPublication,registerPublicationContent,registerReport,registerReportContent,registerResponse,registerResponseContent,registerUser,registermessage,registertag
-
-resetPassword,sendChartComment,sendDownloadComment,sendEventComment,sendIcanComment,sendIoComment,sendNewsComment,sendPubComment,sendValidationCode
- 
- ### Upload service [asmx file](https://github.com/soheilasadeghian/Appinno/blob/main/appinno_panel_webservice/AppinnoNew/service/uploadservice.asmx.cs)
-UploadFile,uploadPacket,uploadRequest
-
-### Push service [asmx file](https://github.com/soheilasadeghian/Appinno/blob/main/appinno_panel_webservice/AppinnoNew/service/pushservice.asmx.cs)
-sendPush,sendPushTo,setPushInfo
 
 ## Appinno Website:
 ![alt text](https://github.com/soheilasadeghian/Appinno/blob/main/screenshot.png)

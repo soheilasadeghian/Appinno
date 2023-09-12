@@ -32,7 +32,7 @@ This repository (Appinno) includes two projects:
 3. Execute (F5) to run. Browser will show Homepage of website.(the picture of homepage is end of this readme)<br/>
 
 
-### call Method to web service:
+### How call a web service Method:
 ```c#
  public static string CallMethod( string method, Dictionary<string, string> Parameters)
 {

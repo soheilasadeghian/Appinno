@@ -12,7 +12,7 @@ This repository (Appinno) includes two projects:
 
 ✔️ Appinno Website project as a client in root of repository(appinno_website Folder)\
     website includes modules like News, Events, Publications, Downloads, Organizations and Charts.\
-    "Appinno Website" is a website made with ASP.NET Web Forms Technology using C#, SQL, Bootstrap, JQuery, Ajax, HTML, CSS, JavaScript, and EntityFramework.\
+    "Appinno Website" is a website made with ASP.NET Web Forms Technology using C#, SQL, HTML, CSS, JavaScript, Bootstrap, JQuery, Ajax and EntityFramework.\
     this project use Web Service for read operation as client.
 
 ✔️ Web Service project with Admin Panel in root of repository(appinno_panel_webservice Folder)\
